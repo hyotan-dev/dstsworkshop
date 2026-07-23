@@ -1,0 +1,1719 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://hyotan-dev.github.io/dstsworkshop/documentation/mbe/digimon_status/">
+      
+      
+        <link rel="prev" href="../battle_skill/">
+      
+      
+        <link rel="next" href="../evolution/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>digimon_status.mbe - DSTS Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#digimon_statusmbe" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="DSTS Workshop" class="md-header__button md-logo" aria-label="DSTS Workshop" data-md-component="logo">
+      
+  <img src="../../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DSTS Workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              digimon_status.mbe
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="DSTS Workshop" class="md-nav__button md-logo" aria-label="DSTS Workshop" data-md-component="logo">
+      
+  <img src="../../../assets/logo.svg" alt="logo">
+
+    </a>
+    DSTS Workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/installmods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to install Mods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/extractdata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extract the game data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MBE files
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MBE files
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../battle_skill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    battle_skill.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    digimon_status.mbe
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    digimon_status.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#000_digimon_status_datacsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        000_digimon_status_data.csv
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="000_digimon_status_data.csv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IDs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elements-and-traits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elements and Traits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#personality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#special-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attachment-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attachment Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Guide
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dlc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DLC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    evolution.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../field_anime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    field_anime.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../field_gimmick_map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    field_gimmick_#.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../field_npc_map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    field_npc_#.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../item/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    item.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model_setting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    model_setting.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dststextures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DSTS textures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../textcolorandimages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Text color and images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://ko-fi.com/hyotan" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#000_digimon_status_datacsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        000_digimon_status_data.csv
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="000_digimon_status_data.csv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IDs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elements-and-traits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elements and Traits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#personality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#special-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attachment-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attachment Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Guide
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dlc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DLC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../battle_skill/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../battle_skill/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    MBE files
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="digimon_statusmbe">digimon_status.mbe</h1>
+<p>This MBE contains basic digimon parameters, like traits, skills, stats and so on. It contains two CSV files: 000_digimon_status_data.csv and 001_experience_table.csv, but the latter lacks research, so we are only going to focus on the former.   </p>
+<h2 id="000_digimon_status_datacsv">000_digimon_status_data.csv</h2>
+<h3 id="ids">IDs</h3>
+<ul>
+<li><strong>int32 0</strong>: Digimon ID.  </li>
+<li><strong>string2 2</strong>: character key (a unique internal name for the Digimon).  </li>
+<li><strong>int2 3</strong>: 3D model name (without file extension).  </li>
+</ul>
+<h3 id="stage">Stage</h3>
+<ul>
+<li><strong>int32 4</strong>: generation/stage.  </li>
+</ul>
+<details class="info">
+<summary>Generation IDs</summary>
+<p><code>0</code> = "-" (used by NPCs)<br />
+<code>1</code> = "In-Training I"<br />
+<code>2</code> = "In-Training II"<br />
+<code>3</code> = "Rookie"<br />
+<code>4</code> = "Champion"<br />
+<code>5</code> = "Ultimate"<br />
+<code>6</code> = "Mega"<br />
+<code>7</code> = "Mega +"<br />
+<code>8</code> = "Armor" (Champion stats)<br />
+<code>9</code> = "Armor" (Mega stats)<br />
+<code>10</code> = "Hybrid" (Human Spirit w/ Champion stats)<br />
+<code>11</code> = "Hybrid" (Beast Spirit w/ Champion stats)<br />
+<code>12</code> = "Hybrid" (Ultimate stats)<br />
+<code>13</code> = "Hybrid" (Mega stats)<br />
+<code>14</code> = "Cannot Train" (unused)  </p>
+</details>
+<h3 id="attributes">Attributes</h3>
+<ul>
+<li><strong>int32 6</strong>: attribute.  </li>
+</ul>
+<details class="info">
+<summary>Attribute IDs</summary>
+<p><code>0</code> = Vaccine<br />
+<code>1</code> = Data<br />
+<code>2</code> = Virus<br />
+<code>3</code> = Free<br />
+<code>4</code> = Variable<br />
+<code>5</code> = Unknown<br />
+<code>6</code> = No Data  (used by NPCs)</p>
+</details>
+<h3 id="elements-and-traits">Elements and Traits</h3>
+<ul>
+<li><strong>int32 7 to 17</strong>: Elemental resistances.<br />
+<code>0</code> = neutral<br />
+<code>1</code> = weak <img alt="weak" src="../../../assets/documentation/digimon_status0001.webp" width="15" /><br />
+<code>2</code> = double weak <img alt="weak x2" src="../../../assets/documentation/digimon_status0002.webp" width="15" /><br />
+<code>3</code> = resist <img alt="resist" src="../../../assets/documentation/digimon_status0003.webp" width="15" /><br />
+<code>4</code> = immune <img alt="immune" src="../../../assets/documentation/digimon_status0004.webp" width="15" />  </li>
+</ul>
+<details class="info">
+<summary>Columns</summary>
+<p><code>int32 7</code> = Null resistance.<br />
+<code>int32 8</code> = Fire resistance.<br />
+<code>int32 9</code> = Water resistance.<br />
+<code>int32 10</code> = Ice resistance.<br />
+<code>int32 11</code> = Plant resistance.<br />
+<code>int32 12</code> = Wind resistance.<br />
+<code>int32 13</code> = Electricity resistance.<br />
+<code>int32 14</code> = Earth resistance.<br />
+<code>int32 15</code> = Steel resistance.<br />
+<code>int32 16</code> = Light resistance.<br />
+<code>int32 17</code> = Dark resistance.  </p>
+</details>
+<ul>
+<li><strong>bol 19 to bol 60</strong>: traits.<br />
+<code>true</code> = has this trait. <code>false</code> = doesn't have this trait.</li>
+</ul>
+<details class="info">
+<summary>Colums</summary>
+<ul>
+<li><strong>bol 19</strong>: Royal Knight.  </li>
+<li><strong>bol 20</strong>: Olympos XII.  </li>
+<li><strong>bol 21</strong>: Seven Great Demon Lords.  </li>
+<li><strong>bol 22</strong>: Titan.  </li>
+<li><strong>bol 23</strong>: Small.  </li>
+<li><strong>bol 24</strong>: Medium.  </li>
+<li><strong>bol 25</strong>: Large.  </li>
+<li><strong>bol 26</strong>: Humanoid.  </li>
+<li><strong>bol 27</strong>: Beast.  </li>
+<li><strong>bol 28</strong>: Fish.  </li>
+<li><strong>bol 29</strong>: Spirit.  </li>
+<li><strong>bol 30</strong>: Aquatic.  </li>
+<li><strong>bol 31</strong>: Ice.  </li>
+<li><strong>bol 32</strong>: Fire.  </li>
+<li><strong>bol 33</strong>: Steel.  </li>
+<li><strong>bol 34</strong>: Mineral.  </li>
+<li><strong>bol 35</strong>: Insectoid.  </li>
+<li><strong>bol 36</strong>: Vegetation.  </li>
+<li><strong>bol 37</strong>: Holy.  </li>
+<li><strong>bol 38</strong>: Evil.  </li>
+<li><strong>bol 39</strong>: Deity.  </li>
+<li><strong>bol 40</strong>: Machine.  </li>
+<li><strong>bol 41</strong>: Angel.  </li>
+<li><strong>bol 42</strong>: Dinosaur.  </li>
+<li><strong>bol 43</strong>: Dragon.  </li>
+<li><strong>bol 44</strong>: Demon.  </li>
+<li><strong>bol 45</strong>: Bird.  </li>
+<li><strong>bol 46</strong>: Amphibian.  </li>
+<li><strong>bol 47</strong>: Reptile.  </li>
+<li><strong>bol 48</strong>: Magic.  </li>
+<li><strong>bol 49</strong>: Ancient.  </li>
+<li><strong>bol 50</strong>: Alien.  </li>
+<li><strong>int32 51</strong>: Pixie (This is the only exception, use <code>1</code> or <code>0</code> instead of <code>true</code> or <code>false</code>).  </li>
+<li><strong>bol 52</strong>: Mythical.  </li>
+<li><strong>bol 53</strong>: Knight.  </li>
+<li><strong>bol 54</strong>: Warrior.  </li>
+<li><strong>bol 55</strong>: Mollusk.  </li>
+<li><strong>bol 56</strong>: Antibody.  </li>
+<li><strong>bol 57</strong>: Immortal.  </li>
+<li><strong>bol 58</strong>: Weapon.  </li>
+<li><strong>bol 59</strong>: Puppet.  </li>
+<li><strong>bol 60</strong>: Unknown.  </li>
+</ul>
+</details>
+<h3 id="personality">Personality</h3>
+<ul>
+<li><strong>int32 61</strong>: base personality ID.</li>
+</ul>
+<details class="info">
+<summary>Personality IDs</summary>
+<p><code>0</code> = – (used by NPCs).<br />
+<code>1</code> = Brave.<br />
+<code>2</code> = Zealous.<br />
+<code>3</code> = Daring.<br />
+<code>4</code> = Reckless.<br />
+<code>5</code> = Adoring.<br />
+<code>6</code> = Devoted.<br />
+<code>7</code> = Tolerant.<br />
+<code>8</code> = Overprotective.<br />
+<code>9</code> = Compassionate.<br />
+<code>10</code> = Sociable.<br />
+<code>11</code> = Friendly.<br />
+<code>12</code> = Opportunistic.<br />
+<code>13</code> = Astute.<br />
+<code>14</code> = Strategic.<br />
+<code>15</code> = Enlightened.<br />
+<code>16</code> = Sly.  </p>
+</details>
+<h3 id="stats">Stats</h3>
+<ul>
+<li><strong>int32 64</strong>: base HP (at level 1).  </li>
+<li><strong>int32 65</strong>: base SP (at level 1).</li>
+<li><strong>int32 66</strong>: base ATK (at level 1).</li>
+<li><strong>int32 67</strong>: base DEF (at level 1).</li>
+<li><strong>int32 68</strong>: base INT (at level 1).</li>
+<li><strong>int32 69</strong>: base SPI (at level 1).</li>
+<li><strong>int32 70</strong>: base SPD (at level 1).</li>
+<li><strong>int32 71</strong>: growth pattern. Determines stat gains per level.</li>
+</ul>
+<details class="info">
+<summary>Growth pattern IDs</summary>
+<ul>
+<li><code>0</code> = no stat growth. Only used by NPCs.  </li>
+<li><code>1</code> = high HP and ATK growth (Agumon, Guilmon, Veemon, etc.).  </li>
+<li><code>4</code> = high SP and INT growth (Impmon, Lunamon, Renamon, etc.).  </li>
+<li><code>7</code> = high HP, moderate ATK and SPD growth (DemiDevimon, Gabumon, Muchomon, etc.).  </li>
+<li><code>10</code> = high SP, moderate INT and SPD growth (Chuumon, Funbeemon, Kudamon, etc.).  </li>
+<li><code>13</code> = moderate HP, ATK and DEF growth (Hagurumon, Kamemon, Terriermon).  </li>
+<li><code>14</code> = high overall stat growth from level 1 to 20, then moderate DEF, INT AND SPI increase (only used by Aegiomon).  </li>
+<li><code>16</code> = high SP, moderate INT and SPI growth (Betamon, Kokuwamon, Shamamon, etc.).  </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more detailed information, check the CSVs inside <strong>digimon_growth.mbe</strong>. There's a file for each growth pattern with all the stats gained from level 1 to 99, including some unused ones (5, 6, 8, 9, 11, 12 and 15).</p>
+</div>
+</details>
+<h3 id="skills">Skills</h3>
+<h4 id="special-skills">Special Skills</h4>
+<ul>
+<li><strong>int32 72</strong>: <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 74</strong>: skill slot occupied by the previous skill (always "1").  </li>
+<li><strong>int32 75</strong>: <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 77</strong>: skill slot occupied by the previous skill (always "2").  </li>
+<li><strong>int32 78</strong>: <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 80</strong>: skill slot occupied by the previous skill (always "3").  </li>
+<li><strong>int32 81</strong>: <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 83</strong>: skill slot occupied by the previous skill (always "4").  </li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>A Digimon can have up to 12 Special Skills, but adding more than 4 breaks the UI (weird things happen, like being unable to use Attachment Skills). Therefore, the following Special Skill columns (84 to 107) will be ignored and shouldn't be used.</p>
+</div>
+<h4 id="attachment-skills">Attachment Skills</h4>
+<ul>
+<li><strong>int32 108</strong>: learnable Attachment Skill 1.  </li>
+<li><strong>int32 110</strong>: Level at which the previous skill is learned.  </li>
+<li><strong>int32 111</strong>: learnable Attachment Skill 2.  </li>
+<li><strong>int32 113</strong>: Level at which the previous skill is learned.  </li>
+<li><strong>int32 114</strong>: learnable Attachment Skill 3.  </li>
+<li><strong>int32 116</strong>: Level at which the previous skill is learned.  </li>
+<li><strong>int32 117</strong>: learnable Attachment Skill 4.  </li>
+<li><strong>int32 119</strong>: Level at which the previous skill is learned.  </li>
+</ul>
+<details class="info">
+<summary>Attachment Skill IDs</summary>
+<p>30011 = Wolkenapalm I<br />
+30012 = Wolkenapalm II<br />
+30013 = Wolkenapalm III<br />
+30021 = Burst Flame I<br />
+30022 = Burst Flame II<br />
+30023 = Burst Flame III<br />
+30031 = Magma Fall I<br />
+30032 = Magma Fall II<br />
+30033 = Magma Fall III<br />
+30034 = Ignition Flare I<br />
+30035 = Ignition Flare II<br />
+30036 = Ignition Flare III<br />
+30041 = Aqua Pressure I<br />
+30042 = Aqua Pressure II<br />
+30043 = Aqua Pressure III<br />
+30051 = Hydro Water I<br />
+30052 = Hydro Water II<br />
+30053 = Hydro Water III<br />
+30061 = Ocean Wave I<br />
+30062 = Ocean Wave II<br />
+30063 = Ocean Wave III<br />
+30064 = Tidal Stream I<br />
+30065 = Tidal Stream II<br />
+30066 = Tidal Stream III<br />
+30071 = Crescent Leaf I<br />
+30072 = Crescent Leaf II<br />
+30073 = Crescent Leaf III<br />
+30081 = Thron Strike I<br />
+30082 = Thron Strike II<br />
+30083 = Thron Strike III<br />
+30091 = Rune Forest I<br />
+30092 = Rune Forest II<br />
+30093 = Rune Forest III<br />
+30094 = Needle Plant I<br />
+30095 = Needle Plant II<br />
+30096 = Needle Plant III<br />
+30101 = Icicle Edge I<br />
+30102 = Icicle Edge II<br />
+30103 = Icicle Edge III<br />
+30111 = Frozen Bullet I<br />
+30112 = Frozen Bullet II<br />
+30113 = Frozen Bullet III<br />
+30121 = Lethal Blizzard I<br />
+30122 = Lethal Blizzard II<br />
+30123 = Lethal Blizzard III<br />
+30124 = Diamond Dust I<br />
+30125 = Diamond Dust II<br />
+30126 = Diamond Dust III<br />
+30131 = Nanomachine Break I<br />
+30132 = Nanomachine Break II<br />
+30133 = Nanomachine Break III<br />
+30141 = Shock Plasma I<br />
+30142 = Shock Plasma II<br />
+30143 = Shock Plasma III<br />
+30151 = Thunder Fall I<br />
+30152 = Thunder Fall II<br />
+30153 = Thunder Fall III<br />
+30154 = Lightning Claw I<br />
+30155 = Lightning Claw II<br />
+30156 = Lightning Claw III<br />
+30161 = Comet Hammer I<br />
+30162 = Comet Hammer II<br />
+30163 = Comet Hammer III<br />
+30171 = Gaia Blaster I<br />
+30172 = Gaia Blaster II<br />
+30173 = Gaia Blaster III<br />
+30181 = Awesome Quake I<br />
+30182 = Awesome Quake II<br />
+30183 = Awesome Quake III<br />
+30184 = Stone Cleave I<br />
+30185 = Stone Cleave II<br />
+30186 = Stone Cleave III<br />
+30191 = Wind Claw I<br />
+30192 = Wind Claw II<br />
+30193 = Wind Claw III<br />
+30201 = Sonic Shot I<br />
+30202 = Sonic Shot II<br />
+30203 = Sonic Shot III<br />
+30211 = Gale Storm I<br />
+30212 = Gale Storm II<br />
+30213 = Gale Storm III<br />
+30214 = Tempest I<br />
+30215 = Tempest II<br />
+30216 = Tempest III<br />
+30221 = Crush Blade I<br />
+30222 = Crush Blade II<br />
+30223 = Crush Blade III<br />
+30231 = Thruster Metal I<br />
+30232 = Thruster Metal II<br />
+30233 = Thruster Metal III<br />
+30241 = Full Metal Pile I<br />
+30242 = Full Metal Pile II<br />
+30243 = Full Metal Pile III<br />
+30244 = Iron Fist I<br />
+30245 = Iron Fist II<br />
+30246 = Iron Fist III<br />
+30251 = Saint Knuckle I<br />
+30252 = Saint Knuckle II<br />
+30253 = Saint Knuckle III<br />
+30261 = Holy Light I<br />
+30262 = Holy Light II<br />
+30263 = Holy Light III<br />
+30271 = Shine Burst I<br />
+30272 = Shine Burst II<br />
+30273 = Shine Burst III<br />
+30274 = Angel Ladder I<br />
+30275 = Angel Ladder II<br />
+30276 = Angel Ladder III<br />
+30281 = Shadow Fang I<br />
+30282 = Shadow Fang II<br />
+30283 = Shadow Fang III<br />
+30291 = Nightmare I<br />
+30292 = Nightmare II<br />
+30293 = Nightmare III<br />
+30301 = Hell Crusher I<br />
+30302 = Hell Crusher II<br />
+30303 = Hell Crusher III<br />
+30304 = Soul Fear I<br />
+30305 = Soul Fear II<br />
+30306 = Soul Fear III<br />
+30311 = Heavy Strike I<br />
+30312 = Heavy Strike II<br />
+30313 = Heavy Strike III<br />
+30321 = Power Energy I<br />
+30322 = Power Energy II<br />
+30323 = Power Energy III<br />
+30331 = Void Ray I<br />
+30332 = Void Ray II<br />
+30333 = Void Ray III<br />
+30334 = Lunatic Gate I<br />
+30335 = Lunatic Gate II<br />
+30336 = Lunatic Gate III<br />
+31011 = Heal<br />
+31012 = X-Heal<br />
+31021 = Aura<br />
+31022 = X-Aura<br />
+31031 = Revive<br />
+31032 = X-Revive<br />
+31041 = Meditator<br />
+31042 = Normalize<br />
+31051 = Dispel<br />
+31061 = Restore<br />
+32011 = Attack Charge<br />
+32021 = Guard Charge<br />
+32031 = Magic Charge<br />
+32041 = Mental Charge<br />
+32051 = Speed Charge<br />
+32061 = Critical Charge<br />
+32071 = Attack Field<br />
+32081 = Guard Field<br />
+32091 = Magic Field<br />
+32101 = Spirit Field<br />
+32111 = Speed Field<br />
+32121 = Critical Field<br />
+32131 = Attack Bind<br />
+32141 = Guard Bind<br />
+32151 = Magic Bind<br />
+32161 = Spirit Bind<br />
+32171 = Speed Bind<br />
+32181 = Critical Bind<br />
+32191 = Attack Break<br />
+32201 = Guard Break<br />
+32211 = Magic Break<br />
+32221 = Mental Break<br />
+32231 = Speed Break<br />
+32241 = Critical Break<br />
+33011 = Venom Trap<br />
+33021 = Panic Wisp<br />
+33031 = Ripping Net<br />
+33041 = Idle Bubble<br />
+33051 = Texture Blow<br />
+33061 = Character Reversal<br />
+34011 = Hate Charge<br />
+34021 = Acceleration Boost<br />
+34031 = Spell Boost<br />
+34041 = Reset Body<br />
+34051 = Attack Reflect<br />
+34061 = Magic Reflect<br />
+34071 = Curse Barrier<br />
+34081 = Status Barrier<br />
+34091 = Safety Guard  </p>
+</details>
+<details class="info">
+<summary>Suggested levels at which Attachment Skills are learned</summary>
+<p>In Training I:<br />
+They don't learn Attachment Skills.  </p>
+<p>In Training II:<br />
+Skill 1: level 5.  </p>
+<p>Rookie:<br />
+Skill 1: level 2.<br />
+Skill 2: level 10.  </p>
+<p>Champion:<br />
+Skill 1: level 2.<br />
+Skill 2: level 15.<br />
+Skill 3: level 25.  </p>
+<p>Ultimate:<br />
+Skill 1: level 2.<br />
+Skill 2: level 20.<br />
+Skill 3: level 30.<br />
+Skill 4: level 40.  </p>
+<p>Mega:<br />
+Skill 1: level 2.<br />
+Skill 2: level 25.<br />
+Skill 3: level 35.<br />
+Skill 4: level 45.  </p>
+<p>Mega +:<br />
+Skill 1: level 2.<br />
+Skill 2: level 25.<br />
+Skill 3: level 35.<br />
+Skill 4: level 45.  </p>
+</details>
+<ul>
+<li><strong>int32 126</strong>: unknown. Must be the same ID as the special skill in slot 1 (<a href="#special-skills">int32 72</a>).  </li>
+</ul>
+<h3 id="field-guide">Field Guide</h3>
+<ul>
+<li><strong>int32 131</strong>: unique field guide ID. Must be a number from 477 to 999. Lower numbers are already in use, and higher numbers crash the game.  </li>
+<li><strong>int32 132</strong>: field guide text ID. Same ID used in the first column (<a href="#ids">int32 0</a>).  </li>
+</ul>
+<h3 id="dlc">DLC</h3>
+<ul>
+<li><strong>int32 133</strong>: DLC required. Must contain the DLC flag ID. Only Parallelmon uses this column.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.path", "navigation.top", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

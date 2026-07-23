@@ -1,0 +1,1438 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://hyotan-dev.github.io/dstsworkshop/tutorials/extractdata/">
+      
+      
+        <link rel="prev" href="../installmods/">
+      
+      
+        <link rel="next" href="../../documentation/mbe/battle_skill/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Extract the game data - DSTS Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-extract-the-game-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DSTS Workshop" class="md-header__button md-logo" aria-label="DSTS Workshop" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DSTS Workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Extract the game data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DSTS Workshop" class="md-nav__button md-logo" aria-label="DSTS Workshop" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    DSTS Workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installmods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to install Mods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extract the game data
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extract the game data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Containers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extract-the-game-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extract the game data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unpack-mbe-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unpack MBE files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unpack MBE files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edit-csv-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit CSV files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extract-sound-and-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extract sound and videos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extract sound and videos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#play-and-convert-sound-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Play and convert sound files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decompile-lua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decompile LUA
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MBE files
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MBE files
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/mbe/battle_skill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    battle_skill.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/mbe/digimon_status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    digimon_status.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/mbe/evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    evolution.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/mbe/field_anime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    field_anime.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/mbe/field_gimmick_map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    field_gimmick_#.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/mbe/field_npc_map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    field_npc_#.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/mbe/item/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    item.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/mbe/model_setting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    model_setting.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/dststextures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DSTS textures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/textcolorandimages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Text color and images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://ko-fi.com/hyotan" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Containers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extract-the-game-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extract the game data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unpack-mbe-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unpack MBE files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unpack MBE files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edit-csv-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit CSV files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extract-sound-and-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extract sound and videos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extract sound and videos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#play-and-convert-sound-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Play and convert sound files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decompile-lua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decompile LUA
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../installmods/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="how-to-extract-the-game-data">How to extract the game data</h1>
+<h2 id="containers">Containers</h2>
+<p>All the game assets are stored in the "gamedata" folder. The default path is:<br />
+<code>C:\Program Files (x86)\Steam\steamapps\common\Digimon Story Time Stranger\gamedata</code></p>
+<ul>
+<li><code>.cpk</code> files contain sound and videos <img alt="🎵" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f3b5.svg" title=":musical_note:" /> <img alt="🎞" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f39e.svg" title=":film_frames:" /> .  </li>
+<li><code>.mvgl</code> files contain everything else: 3D models, databases, textures, etc. <img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f310.svg" title=":globe_with_meridians:" /> <img alt="📄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4c4.svg" title=":page_facing_up:" /> <img alt="🖼" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f5bc.svg" title=":frame_photo:" /> .  </li>
+</ul>
+<p>They are organized in the following way:  </p>
+<ul>
+<li>Files with the <code>app</code> prefix contain all the unpatched base game assets.  </li>
+<li>Files with the <code>patch</code> prefix contain all the assets added through patches.  </li>
+<li>Files with the <code>addcont</code> prefix contain DLC data.  </li>
+</ul>
+<details class="info">
+<summary>DLC IDs</summary>
+<p><code>addcont_01</code> = episode pack 1<br />
+<code>addcont_02</code> = episode pack 2<br />
+<code>addcont_03</code> = episode pack 3<br />
+<code>addcont_05</code> = Golden Moai farm item<br />
+<code>addcont_06</code> = Special Agumon and Gabumon (Early Unlock)<br />
+<code>addcont_07</code> = Costume Public Safety Suit &amp; Special Supplies Set<br />
+<code>addcont_08</code> = Cyber Sleuth BGM Pack.<br />
+<code>addcont_09</code> = Anime Song Pack.<br />
+<code>addcont_10</code> = Outer Dungeons The Halls of EXP, Gold, Materials<br />
+<code>addcont_12</code> = Cyber Sleuth costume<br />
+<code>addcont_13</code> = Swimwear costume<br />
+<code>addcont_14</code> = Chosen Children costume<br />
+<code>addcont_15</code> = Digimon costume<br />
+<code>addcont_17</code> = preorder bonus (Black Agumon and Black Gabumon)  </p>
+</details>
+<ul>
+<li>Files with the <code>_text##</code> sufix contain text data for the different languages (Digimon names, skill names, UI, dialog, etc.).  </li>
+</ul>
+<details class="info">
+<summary>Language IDs</summary>
+<p><code>text00</code> = Japanese <img alt="🇯🇵" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1ef-1f1f5.svg" title=":flag_jp:" /><br />
+<code>text01</code> = English <img alt="🇺🇸" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1fa-1f1f8.svg" title=":flag_us:" /><br />
+<code>text02</code> = French <img alt="🇫🇷" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1eb-1f1f7.svg" title=":flag_fr:" /><br />
+<code>text03</code> = Spanish (Eu) <img alt="🇪🇸" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1ea-1f1f8.svg" title=":flag_es:" /><br />
+<code>text04</code> = German <img alt="🇩🇪" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1e9-1f1ea.svg" title=":flag_de:" /><br />
+<code>text05</code> = Italian <img alt="🇮🇹" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1ee-1f1f9.svg" title=":flag_it:" /><br />
+<code>text07</code> = Portuguese (LatAm) <img alt="🇧🇷" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1e7-1f1f7.svg" title=":flag_br:" /><br />
+<code>text09</code> = Korean <img alt="🇰🇷" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1f0-1f1f7.svg" title=":flag_kr:" /><br />
+<code>text10</code> = Traditional Chinese <img alt="🇹🇼" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1f9-1f1fc.svg" title=":flag_tw:" /><br />
+<code>text11</code> = Simplified Chinese <img alt="🇨🇳" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1e8-1f1f3.svg" title=":flag_cn:" /><br />
+<code>text30</code> = Spanish (LatAm) <img alt="🇲🇽" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1f2-1f1fd.svg" title=":flag_mx:" />  </p>
+</details>
+<div class="admonition example">
+<p class="admonition-title">Examples</p>
+<ul>
+<li><code>addcont_17_text00.dx11.mvgl</code> contains Japanese text for the preorder bonus DLC.  </li>
+<li><code>patch.dx11.cpk</code> contains sound files from patches.  </li>
+<li><code>app_text01.dx11.mvgl</code> contains English text from the base game.  </li>
+</ul>
+</div>
+<h2 id="tools">Tools</h2>
+<p>There are a variety of tools that can be used to extract the game's data:  </p>
+<ul>
+<li>To extract audio from <code>.cpk</code> files, use <a href="https://github.com/Sewer56/CriFsV2Lib/releases">CriFsLib</a> (Read <a href="#extract-sound-and-videos">how to extract audio</a>).  </li>
+<li>For general file extraction:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tool</th>
+<th style="text-align: left;">Extracts mvgl</th>
+<th style="text-align: left;">Unpacks mbe</th>
+<th style="text-align: left;">Decompiles lua</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://github.com/zeak6464/DigimonTimeStrangerToolKit">Digimon Time Stranger ToolKit</a></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://github.com/RyoTune/MVLibraryNET/releases">MVLibrary</a></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://github.com/SydMontague/MVGLTools/releases">MVGLTools</a></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="extract-the-game-data">Extract the game data</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">With Digimon Time Stranger ToolKit</label><label for="__tabbed_1_2">With MVLibrary</label><label for="__tabbed_1_3">With MVGLTools</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Download <strong>Digimon Time Stranger ToolKit</strong> from Github (Code → Download ZIP).  </li>
+</ul>
+<p><img alt="Download DSTSToolKit" loading="lazy" src="../../assets/documentation/extractdata0001.webp" width="300" /></p>
+<ul>
+<li>Move the zip file to the location where you want to install it, such as a "DSTS Toolkit" folder on your desktop.  </li>
+<li>Extract the contents of the zip into that folder, then run <strong>mvgl_tools_gui.exe</strong>.  </li>
+<li>Digimon Time Stranger ToolKit's MVGL Tools menu should now open.  </li>
+<li>Change the "operation" to <strong>unpack-mvgl</strong>.  </li>
+<li>Select the source file (the mvgl file you want to extract) and the target folder (where the extracted content will be saved), then click <strong>Execute</strong> to start the extraction.  </li>
+<li>Wait until the "operation completed successfully" message appears.  </li>
+</ul>
+<p><img alt="DSTSToolKit extract mvgl" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEK1UoTcvsxWNd-SI60NPrtCViihxfViC8-UjBo0m2_mFUI60OnqE0PcNhM5-BNM6L5RDdUIhIqImz_mH1jROgHehAmNEqItFc4X4003vqOyJ0Vst0p3f6oQwkHChpOIEpe7Q2Q4T91Od1T0O0aC7UJfzIzNCq1zpcH5sxz7hzdZW3la2FyLFXn4VndsI/s801/extractdata0002.jpg" width="700" /></p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Download the latest version of MVLibrary from GitHub (<code>MVLibraryNET.GUI-windows.zip</code>).  </li>
+<li>Move the zip file to the location where you want to install it, such as a "MVLibrary" folder on your desktop.  </li>
+<li>Extract the contents of the zip into that folder, then run <strong>MVLibraryNET.GUI.exe</strong>.  </li>
+<li>MVLibrary should now open.  </li>
+<li>Drag and drop a <code>.mvgl</code> file from the "gamedata" folder into MVLibrary.  </li>
+</ul>
+<p><img alt="MVLibrary open" loading="lazy" src="https://images.gamebanana.com/img/ss/tools/68f977426133a.jpg" width="500" /></p>
+<ul>
+<li>Select the files you want to extract → right click → extract   </li>
+<li>Choose a folder to save the extract files.  </li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To select multiple files, use the <span class="keys"><kbd class="key-control">Ctrl</kbd></span> or <span class="keys"><kbd class="key-shift">Shift</kbd></span> keys.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p>MVGLTools is a command-line tool, so it can be a little bit confusing.  </p>
+<ol>
+<li>Download the latest version of MVGLTools from GitHub (<code>MVGLTools-v[version]-win64.zip</code>).  </li>
+<li>Move the zip file to the location where you want to install it, such as a "MVGLTools" folder on your desktop.  </li>
+<li>Extract the contents of the zip into that folder.  </li>
+<li>Click the address bar at the top of the window.  </li>
+<li>Type <code>cmd</code> and press enter.  </li>
+<li>A black window called Command Prompt will open.  </li>
+<li>Copy and paste the following command:<br />
+<code>MVGLToolsCLI.exe --game=dsts --mode=unpack-mvgl "C:\Program Files (x86)\Steam\steamapps\common\Digimon Story Time Stranger\gamedata\app_0.dx11.mvgl" "out"</code></li>
+<li>Then press Enter. Wait until the Command Prompt stops processing.  </li>
+<li>When it finishes, a new folder named <code>out</code> will appear inside the MVGLTools folder with the extracted files.</li>
+</ol>
+<p>To extract a different file, change the filename or path from step 7.</p>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>I recommend extracting the <code>app_0</code> MVGLs first, then extracting the <code>patch</code> MVGLs so the patched files replace the outdated ones.</p>
+</div>
+<h2 id="unpack-mbe-files">Unpack MBE files</h2>
+<p><code>.mbe</code> files contain <code>.csv</code> data tables with various parameteres, including Digimon stats, evolution conditions, skill effects, item information, and more.<br />
+They are located in the <code>data</code> and <code>text</code> folders inside the <code>.mvgl</code> files.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">With Digimon Time Stranger ToolKit</label><label for="__tabbed_2_2">With MVGLTools</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Extract the <code>.mbe</code> files from the game data.  </li>
+<li>Open Digimon Time Stranger ToolKit. Change the "operation" to <strong>unpack-mbe-dir</strong> to extract all the <code>.mbe</code> files inside a folder, or to <strong>unpack-mbe</strong> to extract a single file.  </li>
+<li>Select the source folder/file and the target folder and click the Execute button to start the extraction.  </li>
+<li>Wait until the "operation completed successfully" message appears.  </li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Extract the <code>.mbe</code> files from the game data.  </li>
+<li>Open the MVGLTools folder.  </li>
+<li>Create a new folder named <code>mbe</code> inside it, then place all of your <code>.mbe</code> files in that folder.  </li>
+<li>In the MVGLTools folder, click the address bar at the top of the window.  </li>
+<li>Type <code>cmd</code> and press enter. This will open a Command Prompt window.  </li>
+<li>Copy and paste the following command:<br />
+<code>MVGLToolsCLI.exe --game=dsts --mode=unpack-mbe-dir mbe mbe/out</code>  </li>
+<li>Then press Enter. Wait until the Command Prompt stops processing.  </li>
+<li>When it finishes, a new folder named <code>out</code> will appear inside the <code>mbe</code> folder with the extracted CSV files.  </li>
+</ol>
+</div>
+</div>
+</div>
+<h4 id="edit-csv-files">Edit CSV files</h4>
+<p>To edit CSV data tables, you can use:  </p>
+<ul>
+<li>Any text editor, like Windows Notepad, or <a href="https://notepad-plus-plus.org/">Notepad++</a> which has some <a href="https://www.youtube.com/watch?v=k6w5BcaSqHc">handy CSV plugins</a>.  </li>
+<li>
+<p>For files with a lot of columns, use <a href="https://www.libreoffice.org/download/">LibreOffice's Calc</a>. Make sure the character set is <code>Unicode (UTF-8)</code> when opening the files.  </p>
+<p><img alt="Libreoffice Options" loading="lazy" src="../../assets/documentation/extractdata0003.webp" width="450" /></p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Do NOT use Microsoft Excel</strong> to open CSV files. It changes the column format and causes a lot of problems.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li><a href="../installmods/#install-dsts-mod-loader">Digimon Story: Time Stranger Mod Loader</a> lets the game read unpacked <code>.csv</code> files directly from folders, so you don't need to pack them again. Just place your edited CSV files in a folder with the same name as the MBE file and add it in your mod.  </li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><img alt="📁" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4c1.svg" title=":file_folder:" /> char_info.mbe<br />
+    └─ <img alt="📄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4c4.svg" title=":page_facing_up:" /> 000_char_info.csv  </p>
+</div>
+<ul>
+<li>The <code>.ap</code> prefix appends the content of the <code>.csv</code> file to the original file instead of replacing it.  </li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><img alt="📄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4c4.svg" title=":page_facing_up:" /> 000_char_info.csv → replaces the original file.<br />
+<img alt="📄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4c4.svg" title=":page_facing_up:" /> 000_char_info<strong>.ap</strong>.csv → appends its entries to the original file.  </p>
+<p>If you want to add a new entry, use the <code>.ap</code> prefix. If you want to modify an existing entry, don't use the <code>.ap</code> prefix.</p>
+</div>
+</div>
+<h2 id="extract-sound-and-videos">Extract sound and videos</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">With CriFsLib</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Open <strong>CriFsLib</strong>.  </li>
+<li>Drag and drop the desired <code>.cpk</code> file into the program.</li>
+<li>Right click on the desired media file → extract selected.<br />
+To select multiple files, use the <span class="keys"><kbd class="key-control">Ctrl</kbd></span> or <span class="keys"><kbd class="key-shift">Shift</kbd></span> keys. </li>
+</ul>
+<details class="info">
+<summary>File types</summary>
+<ul>
+<li><strong>BGM</strong> prefix: music <img alt="🎵" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f3b5.svg" title=":musical_note:" /> .  </li>
+<li><strong>en/voice</strong> prefix: English voices and dialog <img alt="🗨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f5e8.svg" title=":speech_left:" /> <img alt="🇺🇸" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1fa-1f1f8.svg" title=":flag_us:" /> .  </li>
+<li><strong>ja/voice</strong> prefix: Japanese voices and dialg <img alt="🗨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f5e8.svg" title=":speech_left:" /> <img alt="🇯🇵" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1ef-1f1f5.svg" title=":flag_jp:" /> .  </li>
+<li><strong>SE</strong> prefix: sound effects (UI, skills, etc) <img alt="🔊" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f50a.svg" title=":loud_sound:" /> .  </li>
+<li><strong>.usm</strong> filetype: movies <img alt="🎞" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f39e.svg" title=":film_frames:" /> .  </li>
+</ul>
+</details>
+</div>
+</div>
+</div>
+<h3 id="play-and-convert-sound-files">Play and convert sound files</h3>
+<p>To play the extracted sound files, use <a href="https://www.foobar2000.org/windows">Foobar2000</a> and install <a href="https://www.foobar2000.org/components/view/foo_input_vgmstream">vgmstream decoder</a> (file → preferences → components → install).<br />
+To convert custom sound files into <code>.hca</code> for mods, use <a href="https://ryotune.github.io/yona/installing-yona/">Yona</a>.  </p>
+<h2 id="decompile-lua">Decompile LUA</h2>
+<p><code>.lua</code> files (located in the <code>lua</code> folder) contain scripts. They control NPC interactions, teleports, cutscenes, and so on.<br />
+Since the game's Lua files are precompiled as Lua 5.2 bytecode, they must be decompiled before they can be edited.  </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">With Digimon Time Stranger ToolKit</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Extract the LUA files from the MVGLs.  </li>
+<li>Download and install <a href="https://www.java.com/en/download/">Java</a>.  </li>
+<li>Run <code>lua_decompiler_gui.exe</code>, located in the <strong>Digimon Time Stranger ToolKit</strong> folder.  </li>
+<li>Select the folder containing the extracted LUA files ("Source Folder"), then choose where you want the decompiled files to be saved ("Output Folder").</li>
+<li>Click "start decompilation" and wait for the process to finish.</li>
+<li>You can now open and edit the Lua files in any text editor.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The game can read decompiled <code>.lua</code> files, so you don't need to compile them again.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.path", "navigation.top", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
