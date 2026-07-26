@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://hyotan-dev.github.io/dstsworkshop/documentation/mbe/battle_skill/">
       
       
-        <link rel="prev" href="../../../tutorials/extractdata/">
+        <link rel="prev" href="../battle_enemy/">
       
       
         <link rel="next" href="../digimon_status/">
@@ -464,6 +464,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../battle_enemy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    battle_enemy.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -808,6 +836,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../field_battle_map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    field_battle_#.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../field_gimmick_map/" class="md-nav__link">
         
   
@@ -936,6 +992,34 @@
     
   
     DSTS textures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maps
   
 
     
@@ -1267,7 +1351,7 @@
     
     
       <li class="md-path__item">
-        <a href="./" class="md-path__link">
+        <a href="../battle_enemy/" class="md-path__link">
           
   <span class="md-ellipsis">
     Documentation
@@ -1288,7 +1372,7 @@
     
     
       <li class="md-path__item">
-        <a href="./" class="md-path__link">
+        <a href="../battle_enemy/" class="md-path__link">
           
   <span class="md-ellipsis">
     MBE files
@@ -1810,13 +1894,15 @@
 <li><strong>int32 0</strong>: unique Mode Change ID.  </li>
 <li><strong>int32 1</strong>: <a href="../digimon_status/#ids">ID of the Digimon</a> the user turns into.  </li>
 <li><strong>int32 4</strong>: does the user return to its original form after executing the skill? <code>1</code> = no. <code>2</code> = yes.<br />
-(this is only in combat; the user always returns to its original form after combat)  </li>
-<li><strong>int32 5</strong>: <code>1</code> = the user changes form <em>before</em> executing the skill. <code>2</code> = the user changes form <em>after</em> executing the skill (only used by MagnaGarurumon).  </li>
-<li><strong>int32 6</strong>: <a href="#000_battle_skill_listcsv">Special Skill ID</a> in slot 1.  </li>
+This only affects combat. The user always returns to its original form after combat.  </li>
+<li><strong>int32 5</strong>: Controls when the user changes form:<br />
+<code>1</code> = before executing the skill.<br />
+<code>2</code> = after executing the skill (only used by MagnaGarurumon).  </li>
+<li><strong>int32 6</strong>: <a href="#000_battle_skill_listcsv">Special Skill ID</a> in slot 1. When a Digimon changes form, the game ignores the Special Skills set in <a href="../digimon_status/#special-skills">digimon_status.mbe</a>, so they must be assigned again here.  </li>
 <li><strong>int32 8</strong>: Special Skill ID in slot 2.  </li>
 <li><strong>int32 10</strong>: Special Skill ID in slot 3.  </li>
 <li><strong>int32 12</strong>: Special Skill ID in slot 4.  </li>
-<li><strong>int32 14</strong> to <strong>int32 28</strong>: Special Skill IDs in slots 5 to 12. Do not use: adding more than 4 skills breaks the UI.  </li>
+<li><strong>int32 14</strong> to <strong>int32 28</strong>: Special Skill IDs in slots 5 to 12. Do not use, as assigning more than four Special Skills breaks the UI.  </li>
 </ul>
 <hr />
 <p>Special thanks to: Zeak6464 and Numen.</p>

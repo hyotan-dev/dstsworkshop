@@ -467,6 +467,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../battle_enemy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    battle_enemy.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../battle_skill/" class="md-nav__link">
         
   
@@ -559,6 +587,34 @@
     
   
     field_anime.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../field_battle_map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    field_battle_#.mbe
   
 
     
@@ -785,6 +841,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../textcolorandimages/" class="md-nav__link">
         
   
@@ -925,7 +1009,7 @@
     
     
       <li class="md-path__item">
-        <a href="../battle_skill/" class="md-path__link">
+        <a href="../battle_enemy/" class="md-path__link">
           
   <span class="md-ellipsis">
     Documentation
@@ -946,7 +1030,7 @@
     
     
       <li class="md-path__item">
-        <a href="../battle_skill/" class="md-path__link">
+        <a href="../battle_enemy/" class="md-path__link">
           
   <span class="md-ellipsis">
     MBE files
@@ -969,9 +1053,9 @@
 
 
 <h1 id="field_npc_mbe">Field_npc_#.mbe</h1>
-<p>Controls basic NPC parameters. "#" is the ID of the map. For example, Field_npc_<strong>t3001</strong>.mbe controls all the NPCs in the In-Between Theater (map t3001).  </p>
+<p>Controls basic NPC parameters. <code>#</code> represents the <a href="../../maps/">map name</a>. For example, Field_npc_<strong>t3001</strong>.mbe controls all the NPCs in the In-Between Theater (map t3001).  </p>
 <details class="info">
-<summary>Some map IDs</summary>
+<summary>Some map names</summary>
 <p>t3001 = In-between Theater<br />
 d0506 = Coliseum lobby<br />
 d0552 = Coliseum Arena<br />
@@ -979,12 +1063,12 @@ d0306 = Zeppelin interior<br />
 d0204 = Central Town Tabern<br />
 t0201 = Akihabara<br />
 t0403 = Inori's House<br />
-d0503 = Mines  </p>
+d0501 = Factorial Area</p>
 </details>
 <h2 id="001_field_npccsv">001_field_npc.csv</h2>
 <ul>
-<li><strong>int32 0</strong>: NPC ID. Must be map ID + unique NPC ID. For example, <code>3001501</code> is the Bartender in the In-Between Theater (3001 = map ID, 501 = NPC ID).  </li>
-<li><strong>int32 1</strong>: visibility. <code>-1</code> = always visible.  </li>
+<li><strong>int32 0</strong>: NPC ID. Must be the map ID followed by a unique NPC ID. For example, <code>3001501</code> is the Bartender in the In-Between Theater (3001 = map ID, 501 = NPC ID).  </li>
+<li><strong>int32 1</strong>: visibility flags. <code>-1</code> = always visible.  </li>
 <li><strong>string2 2</strong>: Internal NPC name. Must be unique per map.  </li>
 <li><strong>string2 3</strong>: interaction ID. Must be unique per map.  </li>
 <li><strong>string2 5</strong>: model name. Can be the 3D model file name without extension (i.e. "chr050" for Agumon) or an entry in union_model.mbe, which controls hairstyles and other aspects.  </li>
@@ -992,7 +1076,7 @@ d0503 = Mines  </p>
 <li><strong>string2 10</strong>: idle animation name.  </li>
 <li><strong>string2 14</strong>: face animation name. <code>F01</code> = normal (idle); <code>F02</code> = closed; <code>F03</code> = angry.  </li>
 <li><strong>int32 15</strong>: closed eye type: <code>0</code> = happy; <code>2</code> = asleep.  </li>
-<li><strong>float 17</strong>: Y position.  </li>
+<li><strong>float 17</strong>: Y position. To check your current coordinates, use the <a href="https://hyotan-dev.github.io/dstscoordfinder/">coordinate finder</a>.  </li>
 <li><strong>float 18</strong>: Z position.  </li>
 <li><strong>float 19</strong>: X position.  </li>
 <li><strong>float 20</strong>: Z rotation. <code>0</code> = facing front; <code>90</code> = facing left; <code>-90</code> = facing right.  </li>

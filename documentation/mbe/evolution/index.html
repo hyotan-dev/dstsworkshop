@@ -467,6 +467,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../battle_enemy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    battle_enemy.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../battle_skill/" class="md-nav__link">
         
   
@@ -659,6 +687,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../field_battle_map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    field_battle_#.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../field_gimmick_map/" class="md-nav__link">
         
   
@@ -787,6 +843,34 @@
     
   
     DSTS textures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maps
   
 
     
@@ -969,7 +1053,7 @@
     
     
       <li class="md-path__item">
-        <a href="../battle_skill/" class="md-path__link">
+        <a href="../battle_enemy/" class="md-path__link">
           
   <span class="md-ellipsis">
     Documentation
@@ -990,7 +1074,7 @@
     
     
       <li class="md-path__item">
-        <a href="../battle_skill/" class="md-path__link">
+        <a href="../battle_enemy/" class="md-path__link">
           
   <span class="md-ellipsis">
     MBE files
@@ -1015,6 +1099,7 @@
 <h1 id="evolutionmbe">evolution.mbe</h1>
 <p>This MBE controls evolution lines and requirements.  </p>
 <h2 id="000_evolution_conditioncsv">000_evolution_condition.csv</h2>
+<p>Controls evolution requirements to evolve into a Digimon.  </p>
 <ul>
 <li><strong>int32 0</strong>: Digimon ID.  </li>
 <li><strong>int32 2</strong>: agent level.  </li>
@@ -1081,6 +1166,7 @@
 <li><strong>int32 29</strong>: DNA Digivolution: second Digimon personality.  </li>
 </ul>
 <h2 id="001_evolution_tocsv">001_evolution_to.csv</h2>
+<p>Controls evolution lines (determines which Digimon evolves into another).  </p>
 <ul>
 <li><strong>int32 0</strong>: unique ID for each evolution.  </li>
 <li><strong>int32 1</strong>: ID of the Digimon that will evolve.  </li>
@@ -1103,7 +1189,7 @@ However, form changes work differently: both Digimon must have a corresponding e
 <h2 id="002_chronodevolutioncsv">002_chronodevolution.csv</h2>
 <details class="warning">
 <summary>SPOILER ALERT: endgame content</summary>
-<p>This CSV defines the De-Digivolved forms that your Digimon turns into when Chronomon uses Chrono Devolution during the final boss fight.</p>
+<p>Defines the De-Digivolved forms that your Digimon turns into when Chronomon uses Chrono Devolution during the final boss fight.</p>
 <table>
 <thead>
 <tr>

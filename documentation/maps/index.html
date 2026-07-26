@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://hyotan-dev.github.io/dstsworkshop/documentation/textcolorandimages/">
+        <link rel="canonical" href="https://hyotan-dev.github.io/dstsworkshop/documentation/maps/">
       
       
-        <link rel="prev" href="../maps/">
+        <link rel="prev" href="../dststextures/">
       
+      
+        <link rel="next" href="../textcolorandimages/">
       
       
         
@@ -23,7 +25,7 @@
     
     
       
-        <title>Text color and images - DSTS Workshop</title>
+        <title>Maps - DSTS Workshop</title>
       
     
     
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#add-color-and-images-to-text" class="md-skip">
+        <a href="#map-names-and-ids" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Text color and images
+              Maps
             
           </span>
         </div>
@@ -776,10 +778,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../maps/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -795,6 +806,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -804,37 +816,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Text color and images
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../textcolorandimages/" class="md-nav__link">
         
   
   
@@ -850,48 +835,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#color" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Color
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#images" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Images
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -950,36 +893,6 @@
   
     
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#color" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Color
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#images" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Images
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1052,137 +965,454 @@
 
 
 
-<h1 id="add-color-and-images-to-text">Add color and images to text</h1>
-<p>You can add color and images to pretty much any text in the game: item names and descriptions, Field Guide descriptions, skill names and descriptions, NPC dialog, etc.  </p>
-<h2 id="color">Color</h2>
-<figure>
-<p><img alt="item color example" src="../../assets/documentation/textcolorandimages0001.webp" width="500" /></p>
-<figcaption>
-<p>Applying color to an item name.</p>
-</figcaption>
-</figure>
-<p>Use this syntax to give color to your text:<br />
-<code>{fc#TEXT}</code></p>
-<p>Replace <code>#</code> with by the desired color ID:  </p>
+<h1 id="map-names-and-ids">Map names and IDs</h1>
+<p>Here's a list of relevant maps.  </p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">ID</th>
-<th style="text-align: left;">Color</th>
+<th style="text-align: left;">Map name</th>
+<th style="text-align: right;">Map ID</th>
+<th style="text-align: left;">Display name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;"><span style="color: #000000;">⬤</span> Black</td>
+<td style="text-align: left;">d0101</td>
+<td style="text-align: right;">10101</td>
+<td style="text-align: left;">Cosmic Terminal</td>
 </tr>
 <tr>
-<td style="text-align: left;">1</td>
-<td style="text-align: left;"><span style="color: #ffffff;">⬤</span> White</td>
+<td style="text-align: left;">d0102</td>
+<td style="text-align: right;">10102</td>
+<td style="text-align: left;">Heat Cosmic: Redflame Area</td>
 </tr>
 <tr>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;"><span style="color: #f34d68;">⬤</span> Dark pink</td>
+<td style="text-align: left;">d0103</td>
+<td style="text-align: right;">10103</td>
+<td style="text-align: left;">Heat Cosmic: Yellowflame Area</td>
 </tr>
 <tr>
-<td style="text-align: left;">3</td>
-<td style="text-align: left;"><span style="color: #00fb00;">⬤</span> Green</td>
+<td style="text-align: left;">d0104</td>
+<td style="text-align: right;">10104</td>
+<td style="text-align: left;">Heat Cosmic: Whiteflame Area</td>
 </tr>
 <tr>
-<td style="text-align: left;">4</td>
-<td style="text-align: left;"><span style="color: #0000fb;">⬤</span> Blue</td>
+<td style="text-align: left;">d0105</td>
+<td style="text-align: right;">10105</td>
+<td style="text-align: left;">Heat Cosmic: Throne Room</td>
 </tr>
 <tr>
-<td style="text-align: left;">5</td>
-<td style="text-align: left;"><span style="color: #fbfb00;">⬤</span> Yellow</td>
+<td style="text-align: left;">d0106</td>
+<td style="text-align: right;">10106</td>
+<td style="text-align: left;">Chill Cosmic: New Moon Area</td>
 </tr>
 <tr>
-<td style="text-align: left;">6</td>
-<td style="text-align: left;"><span style="color: #fb00fb;">⬤</span> Magenta</td>
+<td style="text-align: left;">d0107</td>
+<td style="text-align: right;">10107</td>
+<td style="text-align: left;">Chill Cosmic: Crescent Moon Area</td>
 </tr>
 <tr>
-<td style="text-align: left;">7</td>
-<td style="text-align: left;"><span style="color: #30edcb;">⬤</span> Teal</td>
+<td style="text-align: left;">d0108</td>
+<td style="text-align: right;">10108</td>
+<td style="text-align: left;">Chill Cosmic: Half Moon Area</td>
 </tr>
 <tr>
-<td style="text-align: left;">8</td>
-<td style="text-align: left;"><span style="color: #fb8100;">⬤</span> Orange</td>
+<td style="text-align: left;">d0109</td>
+<td style="text-align: right;">10109</td>
+<td style="text-align: left;">Chill Cosmic: Throne Room</td>
 </tr>
 <tr>
-<td style="text-align: left;">9</td>
-<td style="text-align: left;"><span style="color: #fbbb35;">⬤</span> Light orange</td>
+<td style="text-align: left;">d0201</td>
+<td style="text-align: right;">10201</td>
+<td style="text-align: left;">Central Town</td>
 </tr>
 <tr>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;"><span style="color: #edad14;">⬤</span> Light orange (slightly darker than #9)</td>
+<td style="text-align: left;">d0202</td>
+<td style="text-align: right;">10202</td>
+<td style="text-align: left;">Central Town: Downtown</td>
 </tr>
 <tr>
-<td style="text-align: left;">11</td>
-<td style="text-align: left;"><span style="color: #0fc9fb;">⬤</span> Light blue</td>
+<td style="text-align: left;">d0203</td>
+<td style="text-align: right;">10203</td>
+<td style="text-align: left;">Central Town: Shanty</td>
 </tr>
 <tr>
-<td style="text-align: left;">12</td>
-<td style="text-align: left;"><span style="color: #fbf7bb;">⬤</span> Light yellow</td>
+<td style="text-align: left;">d0204</td>
+<td style="text-align: right;">10204</td>
+<td style="text-align: left;">Warrior's Watering Hole</td>
 </tr>
 <tr>
-<td style="text-align: left;">13</td>
-<td style="text-align: left;"><span style="color: #f5f329;">⬤</span> Yellow (slightly darker than #5)</td>
+<td style="text-align: left;">d0205</td>
+<td style="text-align: right;">10205</td>
+<td style="text-align: left;">Central Isle</td>
 </tr>
 <tr>
-<td style="text-align: left;">14</td>
-<td style="text-align: left;"><span style="color: #fb5c75;">⬤</span> Dark pink (slightly lighter than #2)</td>
+<td style="text-align: left;">d0206</td>
+<td style="text-align: right;">10206</td>
+<td style="text-align: left;">Central Tower: Entrance</td>
 </tr>
 <tr>
-<td style="text-align: left;">15</td>
-<td style="text-align: left;"><span style="color: #abb5bf;">⬤</span> Dark gray</td>
+<td style="text-align: left;">d0207</td>
+<td style="text-align: right;">10207</td>
+<td style="text-align: left;">Central Tower: Steel Maze</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0208</td>
+<td style="text-align: right;">10208</td>
+<td style="text-align: left;">Central Tower: Steel Periphery</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0208</td>
+<td style="text-align: right;">10209</td>
+<td style="text-align: left;">Central Tower: Steel Maze</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0210</td>
+<td style="text-align: right;">10210</td>
+<td style="text-align: left;">Central Tower: Steel Point</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0217</td>
+<td style="text-align: right;">10217</td>
+<td style="text-align: left;">Central Town: Spiral Waterway</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0301</td>
+<td style="text-align: right;">10301</td>
+<td style="text-align: left;">Abyss Surface</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0302</td>
+<td style="text-align: right;">10302</td>
+<td style="text-align: left;">Abyss Beach</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0303</td>
+<td style="text-align: right;">10303</td>
+<td style="text-align: left;">Abyss Depths</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0304</td>
+<td style="text-align: right;">10304</td>
+<td style="text-align: left;">Abyss Sanctuary</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0305</td>
+<td style="text-align: right;">10305</td>
+<td style="text-align: left;">Abyss Sanctuary: Throne Room</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0306</td>
+<td style="text-align: right;">10306</td>
+<td style="text-align: left;">MasterBlimpmon: Gondola</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0308</td>
+<td style="text-align: right;">10308</td>
+<td style="text-align: left;">Lagoon House</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0401</td>
+<td style="text-align: right;">10401</td>
+<td style="text-align: left;">Gear Forest: Floating Island Plains</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0401</td>
+<td style="text-align: right;">10402</td>
+<td style="text-align: left;">Gear Forest: Floating Rock Islands</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0401</td>
+<td style="text-align: right;">10403</td>
+<td style="text-align: left;">Gear Forest: Shaded Woods</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0401</td>
+<td style="text-align: right;">10404</td>
+<td style="text-align: left;">Gear Forest Village</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0401</td>
+<td style="text-align: right;">10405</td>
+<td style="text-align: left;">Gear Forest: Shade Tree Pier</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0401</td>
+<td style="text-align: right;">10406</td>
+<td style="text-align: left;">Gear Forest: Sanctuary</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0401</td>
+<td style="text-align: right;">10407</td>
+<td style="text-align: left;">Gear Forest: Deep Woods</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0501</td>
+<td style="text-align: right;">10501</td>
+<td style="text-align: left;">Factorial Town</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0502</td>
+<td style="text-align: right;">10502</td>
+<td style="text-align: left;">Factorial Area</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0503</td>
+<td style="text-align: right;">10503</td>
+<td style="text-align: left;">Factorial Tunnel: Mines</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0504</td>
+<td style="text-align: right;">10504</td>
+<td style="text-align: left;">Factorial Tunnel: Mines near Core</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0505</td>
+<td style="text-align: right;">10505</td>
+<td style="text-align: left;">Factorial Core</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0505</td>
+<td style="text-align: right;">10506</td>
+<td style="text-align: left;">Paradise Colosseum lobby</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0601</td>
+<td style="text-align: right;">10601</td>
+<td style="text-align: left;">Terminal Otherside</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0602</td>
+<td style="text-align: right;">10602</td>
+<td style="text-align: left;">Palace Otherside</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0603</td>
+<td style="text-align: right;">10603</td>
+<td style="text-align: left;">Palace Otherside: West Passage</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0604</td>
+<td style="text-align: right;">10604</td>
+<td style="text-align: left;">Palace Otherside: East Passage</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0605</td>
+<td style="text-align: right;">10605</td>
+<td style="text-align: left;">Palace Otherside: Throne Room</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0606</td>
+<td style="text-align: right;">10606</td>
+<td style="text-align: left;">Guardian Terminal</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0607</td>
+<td style="text-align: right;">10607</td>
+<td style="text-align: left;">Guardian Palace</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0608</td>
+<td style="text-align: right;">10608</td>
+<td style="text-align: left;">Guardian Palace: Throne Room</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0609</td>
+<td style="text-align: right;">10609</td>
+<td style="text-align: left;">Guardian Rail</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0701</td>
+<td style="text-align: right;">10701</td>
+<td style="text-align: left;">Dark Crevasse</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0702</td>
+<td style="text-align: right;">10702</td>
+<td style="text-align: left;">Dark Garden</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0703</td>
+<td style="text-align: right;">10703</td>
+<td style="text-align: left;">Dark Castle</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0801</td>
+<td style="text-align: right;">10801</td>
+<td style="text-align: left;">Temple of Beginnings: Upper Level</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0802</td>
+<td style="text-align: right;">10802</td>
+<td style="text-align: left;">Temple of Beginnings: Shrine Room</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0900</td>
+<td style="text-align: right;">10900</td>
+<td style="text-align: left;">Akashic Records: Periphery</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0901</td>
+<td style="text-align: right;">10901</td>
+<td style="text-align: left;">Akashic Hades</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0902</td>
+<td style="text-align: right;">10902</td>
+<td style="text-align: left;">Akashic Chaos</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0903</td>
+<td style="text-align: right;">10903</td>
+<td style="text-align: left;">Akashic Forest</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0904</td>
+<td style="text-align: right;">10904</td>
+<td style="text-align: left;">Akashic Abyss</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0905</td>
+<td style="text-align: right;">10905</td>
+<td style="text-align: left;">Akashic Oblivion</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0906</td>
+<td style="text-align: right;">10906</td>
+<td style="text-align: left;">Akashic Ragnarok</td>
+</tr>
+<tr>
+<td style="text-align: left;">d0907</td>
+<td style="text-align: right;">10907</td>
+<td style="text-align: left;">Akashic Records: Innermost Depths</td>
+</tr>
+<tr>
+<td style="text-align: left;">d1001</td>
+<td style="text-align: right;">11001</td>
+<td style="text-align: left;">Forgotten Rails</td>
+</tr>
+<tr>
+<td style="text-align: left;">d1002</td>
+<td style="text-align: right;">11002</td>
+<td style="text-align: left;">Giant Pit</td>
+</tr>
+<tr>
+<td style="text-align: left;">d1204</td>
+<td style="text-align: right;">11204</td>
+<td style="text-align: left;">Rebellion Village</td>
+</tr>
+<tr>
+<td style="text-align: left;">d1205</td>
+<td style="text-align: right;">11205</td>
+<td style="text-align: left;">Rebellion Village: Merukimon's Room</td>
+</tr>
+<tr>
+<td style="text-align: left;">d1206</td>
+<td style="text-align: right;">11206</td>
+<td style="text-align: left;">Rebellion Village: Dr. Simmons' Room</td>
+</tr>
+<tr>
+<td style="text-align: left;">d1301</td>
+<td style="text-align: right;">11301</td>
+<td style="text-align: left;">Special Forces Underground Base: Research Division</td>
+</tr>
+<tr>
+<td style="text-align: left;">d1302</td>
+<td style="text-align: right;">11302</td>
+<td style="text-align: left;">Special Forces Underground Base: Restricted Area</td>
+</tr>
+<tr>
+<td style="text-align: left;">d1303</td>
+<td style="text-align: right;">11303</td>
+<td style="text-align: left;">Special Forces Underground Base: Laboratory</td>
+</tr>
+<tr>
+<td style="text-align: left;">d1304</td>
+<td style="text-align: right;">11304</td>
+<td style="text-align: left;">Special Forces Underground Base: Gantry</td>
+</tr>
+<tr>
+<td style="text-align: left;">d1305</td>
+<td style="text-align: right;">11305</td>
+<td style="text-align: left;">Underground Cable Maintenance Conduit</td>
+</tr>
+<tr>
+<td style="text-align: left;">d1401</td>
+<td style="text-align: right;">11401</td>
+<td style="text-align: left;">Tokyo Metropolitan Government Building: Entrance</td>
+</tr>
+<tr>
+<td style="text-align: left;">d1402</td>
+<td style="text-align: right;">11402</td>
+<td style="text-align: left;">Tokyo Metropolitan Government Building: B1F</td>
+</tr>
+<tr>
+<td style="text-align: left;">d1403</td>
+<td style="text-align: right;">11403</td>
+<td style="text-align: left;">Tokyo Metropolitan Government Building: 36F North Tower</td>
+</tr>
+<tr>
+<td style="text-align: left;">d1404</td>
+<td style="text-align: right;">11404</td>
+<td style="text-align: left;">Tokyo Metropolitan Government Building: 24F North Wing</td>
+</tr>
+<tr>
+<td style="text-align: left;">d1405</td>
+<td style="text-align: right;">11405</td>
+<td style="text-align: left;">Tokyo Metropolitan Government Building: 24F South Wing</td>
+</tr>
+<tr>
+<td style="text-align: left;">d1406</td>
+<td style="text-align: right;">11406</td>
+<td style="text-align: left;">Tokyo Metropolitan Government Building: 36F South Tower</td>
+</tr>
+<tr>
+<td style="text-align: left;">d1407</td>
+<td style="text-align: right;">11407</td>
+<td style="text-align: left;">Tokyo Metropolitan Government Building: Roof</td>
+</tr>
+<tr>
+<td style="text-align: left;">t0402</td>
+<td style="text-align: right;">402</td>
+<td style="text-align: left;">Misono Detective Agency</td>
+</tr>
+<tr>
+<td style="text-align: left;">t0403</td>
+<td style="text-align: right;">403</td>
+<td style="text-align: left;">Misono Home: Living Room</td>
+</tr>
+<tr>
+<td style="text-align: left;">t0404</td>
+<td style="text-align: right;">404</td>
+<td style="text-align: left;">Misono Home: Attic</td>
+</tr>
+<tr>
+<td style="text-align: left;">t0408</td>
+<td style="text-align: right;">408</td>
+<td style="text-align: left;">Misono Home: Roof</td>
+</tr>
+<tr>
+<td style="text-align: left;">t3001</td>
+<td style="text-align: right;">3001</td>
+<td style="text-align: left;">The In-Between Theater (Lobby)</td>
+</tr>
+<tr>
+<td style="text-align: left;">t3002</td>
+<td style="text-align: right;">3002</td>
+<td style="text-align: left;">The In-Between Theater (Theater)</td>
+</tr>
+<tr>
+<td style="text-align: left;">t3003</td>
+<td style="text-align: right;">3003</td>
+<td style="text-align: left;">The In-Between Theater: VIP Room</td>
+</tr>
+<tr>
+<td style="text-align: left;">t3004</td>
+<td style="text-align: right;">3004</td>
+<td style="text-align: left;">The In-Between Theater: Elevator Hall</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition example">
-<p class="admonition-title">Examples</p>
-<ul>
-<li><code>{fc6Hello World!}</code> → <span style="color: #fb00fb;">Hello World!</span>.  </li>
-<li><code>{fc8Awesome Item:} Defense Up</code> → <span style="color: #fb8100;">Awesome Item:</span> Defense Up  </li>
-<li><code>{fc14Mark} is a {fc7Dinosaur}</code> → <span style="color: #fb5c75;">Mark</span> is a <span style="color: #30edcb;">Dinosaur</span>  </li>
-</ul>
-</div>
-<hr />
-<h2 id="images">Images</h2>
-<p>Images are mainly used for icons in skill descriptions, but can be used almost anywhere else.<br />
-<strong>The image must be a square dds file, linear and with mipmaps. BC7 is recomended</strong>, but BC1 can also be used. Read more about texture formats <a href="../dststextures/#the-dds-format">here</a>.   </p>
-<p>The syntax to add images is:<br />
-<code>{is#}{image(FILENAME)}</code>  </p>
-<p><code>#</code> is the image size. The filename must be a texture inside the "images" folder, without image extension, or the game will crash.  </p>
-<div class="admonition example">
-<p class="admonition-title">Examples</p>
-<p>Using a custom texture called <code>smiling_face.dds</code>:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">End result</th>
-<th style="text-align: left;">Code</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><img alt="custom image 1" loading="lazy" src="../../assets/documentation/textcolorandimages0002.webp" width="400" /></td>
-<td style="text-align: left;"><code>{is24}{image(smiling_face)} HP Capsule I</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiIwNPzm0Xja0IIbJVZaVYflFAU0LNtpobgVyFo8429qtu7Xa_w3_4hRwIEnVguZOsg-XT0J5BC8Arz_APcm3d8nWs4N6_Mmkda4p-ytk5B3vAQSk42P3yD6GTZ9LxFM1WD-D_-b1V_HJa2HRzfTrMgOKbzpFY59Vvf37ktzgouuEg13b3l8l0C442oMt4/s1280/textcolorandimages0003.png"><img alt="custom image 2" loading="lazy" src="../../assets/documentation/textcolorandimages0003.webp" width="400" /></a></td>
-<td style="text-align: left;"><code>{is170}{image(smiling_face)}</code> <br><br> • The Field Guide panel is slightly tilted to the right, so images may look skewed due to the perspective. <br> • To move images, just add line breaks or spaces to the text.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzXbwEtYGF9PqerQDX0AUyVwGo8wMgA20vSVFCpDeoOxxQ-VTMdKVPJWuN3pHb9sE42WpbhRekFcyR-kSRd9R51scvVnGaNi9tOiejlYnDpotwJvWt-Thvk_9xFHZUjysg3Mgbp6RS_Hbjy1pDKwC84RKGonTdwcsIfGFS1mN_vBM0lkGpSq0-pHjVEpc/s500/textcolorandimages0004.png"><img alt="custom image 3" loading="lazy" src="../../assets/documentation/textcolorandimages0004.webp" width="400" /></a></td>
-<td style="text-align: left;"><code>{is50}{image(smiling_face)}</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Don't use color codes or images in <strong>item_ruby.mbe</strong>, since that file use used to sort items, and these codes may break the intended sorting.</p>
-</div>
 
 
 
