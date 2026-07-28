@@ -551,6 +551,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../char_info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    char_info.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../evolution/" class="md-nav__link">
         
   
@@ -1072,7 +1100,7 @@ E[004_battle_enemy_ai.csv]</code></pre>
 </details>
 <h2 id="001_field_symbol_enemycsv">001_field_symbol_enemy.csv</h2>
 <ul>
-<li><strong>int32 0</strong> = wild enemy ID. Must be the map ID followed by a unique wild spawn ID (from 0 to 99). For example, <code>1030133</code> is one of the wild Raremon in the Abyss Surface (10301 = map ID, 33 = wild enemy ID).  </li>
+<li><strong>int32 0</strong> = wild enemy ID. Must be the <a href="../../maps/">map ID</a> followed by a unique wild spawn ID (from 0 to 99). For example, <code>1030133</code> is one of the wild Raremon in the Abyss Surface (10301 = map ID, 33 = wild enemy ID).  </li>
 <li><strong>int32 1</strong> = <a href="../battle_enemy/#001_encount_groupcsv">encounter group ID</a> triggered when you interact with the spawn. The first enemy in the encounter group (<code>int32 2</code>) determines the model used by the wild spawn in the overworld.  </li>
 <li><strong>int32 3</strong> = visibility flags. <code>-1</code> = always visible.  </li>
 <li><strong>float 13</strong> = Y position. To check your current coordinates, use the <a href="https://hyotan-dev.github.io/dstscoordfinder/">coordinate finder</a>.  </li>

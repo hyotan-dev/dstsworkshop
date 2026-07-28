@@ -2,66 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://hyotan-dev.github.io/dstsworkshop/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
          <loc>https://hyotan-dev.github.io/dstsworkshop/documentation/dststextures/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
          <loc>https://hyotan-dev.github.io/dstsworkshop/documentation/maps/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
          <loc>https://hyotan-dev.github.io/dstsworkshop/documentation/textcolorandimages/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
          <loc>https://hyotan-dev.github.io/dstsworkshop/documentation/mbe/battle_enemy/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
          <loc>https://hyotan-dev.github.io/dstsworkshop/documentation/mbe/battle_skill/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+         <loc>https://hyotan-dev.github.io/dstsworkshop/documentation/mbe/char_info/</loc>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
          <loc>https://hyotan-dev.github.io/dstsworkshop/documentation/mbe/digimon_status/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
          <loc>https://hyotan-dev.github.io/dstsworkshop/documentation/mbe/evolution/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
          <loc>https://hyotan-dev.github.io/dstsworkshop/documentation/mbe/field_anime/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
          <loc>https://hyotan-dev.github.io/dstsworkshop/documentation/mbe/field_battle_map/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
          <loc>https://hyotan-dev.github.io/dstsworkshop/documentation/mbe/field_gimmick_map/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
          <loc>https://hyotan-dev.github.io/dstsworkshop/documentation/mbe/field_npc_map/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
          <loc>https://hyotan-dev.github.io/dstsworkshop/documentation/mbe/item/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
          <loc>https://hyotan-dev.github.io/dstsworkshop/documentation/mbe/model_setting/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
          <loc>https://hyotan-dev.github.io/dstsworkshop/tutorials/extractdata/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
          <loc>https://hyotan-dev.github.io/dstsworkshop/tutorials/installmods/</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-07-28</lastmod>
     </url>
 </urlset>

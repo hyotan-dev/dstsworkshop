@@ -14,7 +14,7 @@
         <link rel="prev" href="../battle_skill/">
       
       
-        <link rel="next" href="../evolution/">
+        <link rel="next" href="../char_info/">
       
       
         
@@ -742,6 +742,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../char_info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    char_info.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../evolution/" class="md-nav__link">
         
   
@@ -1324,7 +1352,7 @@
 <h3 id="ids">IDs</h3>
 <ul>
 <li><strong>int32 0</strong>: Digimon ID.  </li>
-<li><strong>string2 2</strong>: character key (a unique internal name for the Digimon).  </li>
+<li><strong>string2 2</strong>: character key (a unique internal name for the Digimon). Must match the key used in <a href="../char_info/">char_info.mbe</a>.  </li>
 <li><strong>int2 3</strong>: 3D model name (without file extension).  </li>
 </ul>
 <h3 id="stage">Stage</h3>
@@ -1492,19 +1520,23 @@
 <h3 id="skills">Skills</h3>
 <h4 id="special-skills">Special Skills</h4>
 <ul>
-<li><strong>int32 72</strong>: <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
-<li><strong>int32 74</strong>: skill slot occupied by the previous skill (always "1").  </li>
-<li><strong>int32 75</strong>: <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
-<li><strong>int32 77</strong>: skill slot occupied by the previous skill (always "2").  </li>
-<li><strong>int32 78</strong>: <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
-<li><strong>int32 80</strong>: skill slot occupied by the previous skill (always "3").  </li>
-<li><strong>int32 81</strong>: <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
-<li><strong>int32 83</strong>: skill slot occupied by the previous skill (always "4").  </li>
+<li><strong>int32 72</strong>: first <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 74</strong>: skill slot occupied by the previous skill (always <code>1</code>).  </li>
+<li><strong>int32 75</strong>: second <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 77</strong>: skill slot occupied by the previous skill (always <code>2</code>).  </li>
+<li><strong>int32 78</strong>: third <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 80</strong>: skill slot occupied by the previous skill (always <code>3</code>).  </li>
+<li><strong>int32 81</strong>: fourth <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 83</strong>: skill slot occupied by the previous skill (always <code>4</code>).  </li>
 </ul>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>A Digimon can have up to 12 Special Skills, but adding more than 4 breaks the UI (weird things happen, like being unable to use Attachment Skills). Therefore, the following Special Skill columns (84 to 107) will be ignored and shouldn't be used.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A Digimon can have up to 12 Special Skills, but adding more than 4 breaks the UI (weird things happen, like being unable to use Attachment Skills). Therefore, the following Special Skill columns (<code>84</code> to <code>107</code>) will be ignored and shouldn't be used.</p>
 </div>
+<details class="info">
+<summary>About Special Skill voice lines</summary>
+<p>Unlike the voice lines for other actions, which can be edited in <a href="../char_info/#voices">char_info.mbe</a>, the voice lines for Special Skills are hardcoded. For example, Omnimon will always use the "Transcendent Sword" voice line when using the Special Skill in slot 1, even if that skill isn't actually Transcendent Sword. Therefore, if you're adding a new Special Skill to an existing Digimon, it's best to use an empty slot instead.</p>
+</details>
 <h4 id="attachment-skills">Attachment Skills</h4>
 <ul>
 <li><strong>int32 108</strong>: learnable Attachment Skill 1.  </li>
