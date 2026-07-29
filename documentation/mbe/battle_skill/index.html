@@ -709,6 +709,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Misc.
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1304,6 +1315,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Misc.
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1432,6 +1454,7 @@
 <code>0</code> = automatic description.<br />
     Skill ID = unique description (set in <code>text/skill_explanation.mbe</code>).<br />
 <code>-1</code> = no description.</li>
+<li><strong>int32 6</strong>: unknown. Must use the same ID as the first column.  </li>
 </ul>
 <h3 id="visual-effects">Visual effects</h3>
 <ul>
@@ -1493,7 +1516,8 @@
 <li><strong>int32 20</strong>: skill category:<br />
 <code>0</code> = Special Skill<br />
 <code>1</code> = Attachment Skill<br />
-<code>2</code> = Item skill (effect used by HP Capsules and similar items, does not consume a turn)  </li>
+<code>2</code> = Item skill (effect used by HP Capsules and similar items, does not consume a turn)<br />
+<code>3</code> = Other (used by Cross Arts, basic Attack and Guard commands, etc.)</li>
 </ul>
 <h3 id="damage">Damage</h3>
 <ul>
@@ -1654,9 +1678,15 @@
 <h3 id="sp-cost-and-other-basic-parameters">SP cost and other basic parameters</h3>
 <ul>
 <li><strong>int32 36</strong>: SP cost.  </li>
+<li><strong>int32 38</strong>: Critical Points cost. Only used by Cross Art Skills and special boss skills.<br />
+<code>0</code> = does not consume critical points.<br />
+<code>6</code> = consumes 50% of the gauge.<br />
+<code>12</code> = consumes the entire gauge.<br />
+Higher values are only used by bosses, which have larger gauges.  </li>
 <li><strong>int32 39</strong>: <code>0</code> = can miss. <code>1</code> = never misses.  </li>
 <li><strong>int32 40</strong>: accuracy.  </li>
-<li><strong>int32 42</strong>: critical rate.  </li>
+<li><strong>int8 41</strong>: <code>0</code> = cannot be critical. <code>1</code> = can be critical.   </li>
+<li><strong>int32 42</strong>: critical rate (if the previous column is <code>1</code>).  </li>
 <li><strong>int32 43</strong>: HP drain (<code>0</code> to <code>100</code>).  </li>
 <li><strong>int32 44</strong>: SP drain (<code>0</code> to <code>100</code>).  </li>
 <li><strong>int32 45</strong>: recoil damage (<code>0</code> to <code>100</code>).  </li>
@@ -1806,6 +1836,10 @@
 <li><strong>int32 64</strong>: ID of the first Digimon (only use if "int32 63" is <code>1</code>, otherwise, always <code>-1</code>).  </li>
 <li><strong>int32 65</strong>: ID of the second Digimon (only use if "int32 63" is <code>1</code>, otherwise, always <code>-1</code>).  </li>
 </ul>
+<h3 id="misc">Misc.</h3>
+<ul>
+<li><strong>string2 72</strong>: the skill is a message. <strong>Leave this field empty</strong>, as it is only used by the system. If the value is <code>battle_skill_idle</code>, the camera focuses on the target for a few seconds while displaying a message at the top of the screen. Used when a Special Encounter appears, when a boss is charging an attack, and in similar situations.  </li>
+</ul>
 <hr />
 <h2 id="002_buff_setcsv">002_buff_set.csv</h2>
 <p>This CSV controls buffs and debuffs. Each buff set can have up to 11 buffs and/or debuffs.  </p>
@@ -1934,7 +1968,7 @@ This only affects combat. The user always returns to its original form after com
 <li><strong>int32 14</strong> to <strong>int32 28</strong>: Special Skill IDs in slots 5 to 12. Do not use, as assigning more than four Special Skills breaks the UI.  </li>
 </ul>
 <hr />
-<p>Special thanks to: Zeak6464, babynamisbaby and Numen.</p>
+<p>Special thanks to: Zeak6464, Numen, JackVA, 玄元•莫斯提兽 and babynamisbaby.</p>
 
 
 
