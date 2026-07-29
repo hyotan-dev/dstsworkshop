@@ -1456,15 +1456,15 @@
 </tr>
 <tr>
 <td style="text-align: left;"><code>9</code> = Change personality</td>
-<td style="text-align: left;"><a href="../digimon_status/#personality">Personality ID</a> (0 to 16).</td>
+<td style="text-align: left;"><a href="../digimon_status/#personality">Personality ID</a> (<code>1</code> to <code>16</code>).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>10</code> = Move personality (horizontal)</td>
-<td style="text-align: left;">Moves personality between "Heart" and "Understanding".</td>
+<td style="text-align: left;">Positive values move the personality toward "Heart" (right), while negative values move it toward "Understanding" (left).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>11</code> = Move personality (vertical)</td>
-<td style="text-align: left;">Moves personality between "Affection" and "Companionship".</td>
+<td style="text-align: left;">Positive values move the personality toward "Companionship" (down), while negative values move it toward "Affection" (up).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>12</code> = Talent</td>
@@ -1510,15 +1510,19 @@
 </div>
 </details>
 <ul>
-<li><strong>int32 17</strong> and <strong>int32 18</strong>: second overworld effect. Same functionality and values as int32 15 and 16. Combining out-of-battle effects is not fully supported and some text can look broken.  </li>
+<li><strong>int32 17</strong> and <strong>int32 18</strong>: second overworld effect. These fields function identically to columns int32 15 and 16. <code>int32 17</code> stores the effect ID, and <code>int32 18</code> stores its value.  </li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Combining two overworld effects is not fully supported, and some text may display incorrectly.  </p>
+</div>
 <h3 id="scripts">Scripts</h3>
 <ul>
-<li><strong>string2 19</strong>: lua function name. Used to run lua scripts.  </li>
+<li><strong>string2 19</strong>: Lua function name. Used to execute Lua scripts for a wide variety of purposes.  </li>
 </ul>
 <h3 id="costumes">Costumes</h3>
 <ul>
-<li><strong>int32 26</strong>: costume ID. If you have this item in your bag, it unlocks a costume/outfit for the protagonist.  </li>
+<li><strong>int32 26</strong>: costume ID (from <code>model_costume_change.mbe</code>). If the item is in the player's bag, it unlocks the corresponding costume/outfit. The <a href="#basic-parameters">item's category</a> must be set to <code>7</code> for the costume to be equippable.  </li>
 </ul>
 <h3 id="digifarm">Digifarm</h3>
 <ul>
