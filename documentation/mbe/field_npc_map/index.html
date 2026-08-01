@@ -523,14 +523,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../digimon_status/" class="md-nav__link">
+      <a href="../char_info/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    digimon_status.mbe
+    char_info.mbe
   
 
     
@@ -551,14 +551,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../char_info/" class="md-nav__link">
+      <a href="../digimon_status/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    char_info.mbe
+    digimon_status.mbe
   
 
     
@@ -826,6 +826,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    shop.mbe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -876,7 +904,7 @@
   <span class="md-ellipsis">
     
   
-    Maps
+    Map IDs
   
 
     
@@ -1082,23 +1110,12 @@
 
 <h1 id="field_npc_mbe">Field_npc_#.mbe</h1>
 <p>Controls basic NPC parameters. <code>#</code> represents the <a href="../../maps/">map name</a>. For example, Field_npc_<strong>t3001</strong>.mbe controls all the NPCs in the In-Between Theater (map t3001).  </p>
-<details class="info">
-<summary>Some map names</summary>
-<p>t3001 = In-between Theater<br />
-d0506 = Coliseum lobby<br />
-d0552 = Coliseum Arena<br />
-d0306 = Zeppelin interior<br />
-d0204 = Central Town Tabern<br />
-t0201 = Akihabara<br />
-t0403 = Inori's House<br />
-d0501 = Factorial Area</p>
-</details>
 <h2 id="001_field_npccsv">001_field_npc.csv</h2>
 <ul>
 <li><strong>int32 0</strong>: NPC ID. Must be the <a href="../../maps/">map ID</a> followed by a unique NPC ID. For example, <code>3001501</code> is the Bartender in the In-Between Theater (3001 = map ID, 501 = NPC ID).  </li>
 <li><strong>int32 1</strong>: visibility flags. <code>-1</code> = always visible.  </li>
 <li><strong>string2 2</strong>: Internal NPC name. Must be unique per map.  </li>
-<li><strong>string2 3</strong>: interaction ID. Must be unique per map.  </li>
+<li><strong>string2 3</strong>: interaction ID. Must be unique per map. Used to run lua scripts, such as <a href="../shop/">opening shops</a>.  </li>
 <li><strong>string2 5</strong>: model name. Can be the 3D model file name without extension (i.e. "chr050" for Agumon) or an entry in union_model.mbe, which controls hairstyles and other aspects.  </li>
 <li><strong>int32 6</strong>: rendering. <code>0</code> = 3d model. <code>1</code> = dot sprite.  </li>
 <li><strong>string2 10</strong>: idle animation name.  </li>
