@@ -495,6 +495,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3d-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3D models
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Textures
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1193,6 +1215,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3d-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3D models
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Textures
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1408,6 +1452,7 @@
 <p class="admonition-title">Tip</p>
 <p>I recommend extracting the <code>app_0</code> MVGLs first, then extracting the <code>patch</code> MVGLs so the patched files replace the outdated ones.</p>
 </div>
+<hr />
 <h2 id="unpack-mbe-files">Unpack MBE files</h2>
 <p><code>.mbe</code> files contain <code>.csv</code> data tables with various parameteres, including Digimon stats, evolution conditions, skill effects, item information, and more.<br />
 They are located in the <code>data</code> and <code>text</code> folders inside the <code>.mvgl</code> files.</p>
@@ -1473,6 +1518,7 @@ They are located in the <code>data</code> and <code>text</code> folders inside t
 <p>If you want to add a new entry, use the <code>.ap</code> prefix. If you want to modify an existing entry, don't use the <code>.ap</code> prefix.</p>
 </div>
 </div>
+<hr />
 <h2 id="extract-sound-and-videos">Extract sound and videos</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">With CriFsLib</label></div>
 <div class="tabbed-content">
@@ -1499,6 +1545,7 @@ To select multiple files, use the <span class="keys"><kbd class="key-control">Ct
 <h3 id="play-and-convert-sound-files">Play and convert sound files</h3>
 <p>To play the extracted sound files, use <a href="https://www.foobar2000.org/windows">Foobar2000</a> and install <a href="https://www.foobar2000.org/components/view/foo_input_vgmstream">vgmstream decoder</a> (file → preferences → components → install).<br />
 To convert custom sound files into <code>.hca</code> for mods, use <a href="https://ryotune.github.io/yona/installing-yona/">Yona</a>.  </p>
+<hr />
 <h2 id="decompile-lua">Decompile LUA</h2>
 <p><code>.lua</code> files (located in the <code>lua</code> folder) contain scripts. They control NPC interactions, teleports, cutscenes, and so on.<br />
 Since the game's Lua files are precompiled as Lua 5.2 bytecode, they must be decompiled before they can be edited.  </p>
@@ -1520,6 +1567,197 @@ Since the game's Lua files are precompiled as Lua 5.2 bytecode, they must be dec
 <p class="admonition-title">Info</p>
 <p>The game can read decompiled <code>.lua</code> files, so you don't need to compile them again.</p>
 </div>
+<hr />
+<h2 id="3d-models">3D models</h2>
+<p>3D models consist of three different file types:<br />
+<code>.geom</code> files contain geometry, bones and materials.<br />
+<code>.nlst</code> files contain node lists (bone hierarchy, etc.).<br />
+<code>.anim</code> files contain animations.  </p>
+<p>To open these files, you must install Blender and one of the following add-ons:  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Add-on</th>
+<th style="text-align: left;">Imports mesh</th>
+<th style="text-align: left;">Imports animations</th>
+<th style="text-align: left;">Exports mesh</th>
+<th style="text-align: left;">Exports animations</th>
+<th style="text-align: left;">Blender version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://github.com/zeak6464/DSTS_BlenderPlugin/releases">Zeak's</a></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><a href="https://download.blender.org/release/Blender4.5/">4.5</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://github.com/Romsstar/Blender-Tools-for-DSCS/tree/feature/refactor">Romsstar's</a></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><a href="https://download.blender.org/release/Blender4.5/">4.5</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://github.com/Named-Blade/dsts-formats/releases">Nymic_Razor's</a></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span></td>
+<td style="text-align: left;"><a href="https://download.blender.org/release/Blender4.5/">4.5</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://github.com/ElderLich/Time-Stranger-Importer">Senator John's</a></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></td>
+<td style="text-align: left;"><a href="https://download.blender.org/release/Blender5.1/">5.1</a></td>
+</tr>
+</tbody>
+</table>
+<details class="info">
+<summary>How to install add-ons</summary>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/OCTvyo2FVFw?si=BUALH3tdg6sPfV-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Blender 4.5, instead of an <strong>Install</strong> button, you'll see a <img alt="🔽" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f53d.svg" title=":arrow_down_small:" /> arrow. Click it and select <strong>Install from Disk</strong>.</p>
+</div>
+</details>
+<details class="info">
+<summary>Known bugs and limitations</summary>
+<ul>
+<li>Some add-ons are not compatible with each other. Don't install all of them at the same time, or you may encounter errors.  </li>
+<li>Skill effects, particles, lights, texture animations and object collisions can't be edited yet.</li>
+<li>Time Stranger models contain many unnecessary vertices, which significantly increase the file size. To remove them, enter edit mode, select all and go to Mesh → Clean Up → Delete loose.</li>
+<li>Some meshes become invisible if they only have 1 weight. <a href="https://www.youtube.com/watch?v=SvbR00yiRHY">Assign a random bone</a> (preferably mvglDummy0000) with a weight of 0.001 to fix it.</li>
+<li>Edited/custom digimon models may have thicker outlines (<a href="https://www.youtube.com/watch?v=-3Bzm5BN26s">workaround</a>).</li>
+<li>Custom player models <a href="https://www.youtube.com/watch?v=RIpFDqG1BAY">can't use train terminals</a>.</li>
+<li>When using a custom player model, the Palmon you call to travel between floating islands in the Gear Forest <a href="https://www.youtube.com/watch?v=uE7RlEBSBhc">will be invisible during the cutscene</a>.</li>
+<li>If your model has weird shadows, it's likely a weight normalization problem. The sum of all weights must be exactly "1". To fix it, enter weight paint mode and go to weights → normalize all.  </li>
+</ul>
+</details>
+<details class="info">
+<summary>Digimon animation names</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Animation name</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">bn01</td>
+<td style="text-align: left;">Idle.</td>
+</tr>
+<tr>
+<td style="text-align: left;">fe02</td>
+<td style="text-align: left;">Second idle.</td>
+</tr>
+<tr>
+<td style="text-align: left;">br01</td>
+<td style="text-align: left;">Walk.</td>
+</tr>
+<tr>
+<td style="text-align: left;">ba01</td>
+<td style="text-align: left;">Physical attack.</td>
+</tr>
+<tr>
+<td style="text-align: left;">ba02</td>
+<td style="text-align: left;">Magic attack.</td>
+</tr>
+<tr>
+<td style="text-align: left;">bs01</td>
+<td style="text-align: left;">Special Skill 1.</td>
+</tr>
+<tr>
+<td style="text-align: left;">bs02</td>
+<td style="text-align: left;">Special Skill 2.</td>
+</tr>
+<tr>
+<td style="text-align: left;">bs03</td>
+<td style="text-align: left;">Special Skill 3.</td>
+</tr>
+<tr>
+<td style="text-align: left;">bs04</td>
+<td style="text-align: left;">Special Skill 4.</td>
+</tr>
+<tr>
+<td style="text-align: left;">bd01</td>
+<td style="text-align: left;">Damage taken.</td>
+</tr>
+<tr>
+<td style="text-align: left;">bd02</td>
+<td style="text-align: left;">Death.</td>
+</tr>
+<tr>
+<td style="text-align: left;">bd01</td>
+<td style="text-align: left;">Revive.</td>
+</tr>
+<tr>
+<td style="text-align: left;">bg01</td>
+<td style="text-align: left;">Guard.</td>
+</tr>
+<tr>
+<td style="text-align: left;">bg02</td>
+<td style="text-align: left;">Guard 2.</td>
+</tr>
+<tr>
+<td style="text-align: left;">bv01</td>
+<td style="text-align: left;">Victory. Played at the end of the battle.</td>
+</tr>
+<tr>
+<td style="text-align: left;">fe01</td>
+<td style="text-align: left;">Eating.</td>
+</tr>
+<tr>
+<td style="text-align: left;">fe03</td>
+<td style="text-align: left;">Yawn. Unused?</td>
+</tr>
+<tr>
+<td style="text-align: left;">fe04</td>
+<td style="text-align: left;">Played when a food is liked in the Digifarm.</td>
+</tr>
+<tr>
+<td style="text-align: left;">bn02</td>
+<td style="text-align: left;">Poisoned/paralyzed/asleep. Also used in the Digifarm's sauna.</td>
+</tr>
+<tr>
+<td style="text-align: left;">fq01</td>
+<td style="text-align: left;">Agree (positive response).</td>
+</tr>
+<tr>
+<td style="text-align: left;">fq02</td>
+<td style="text-align: left;">Disagree (negative response).</td>
+</tr>
+<tr>
+<td style="text-align: left;">r###_fn01</td>
+<td style="text-align: left;">Ride idle.</td>
+</tr>
+<tr>
+<td style="text-align: left;">r###_fw01</td>
+<td style="text-align: left;">Ride walk.</td>
+</tr>
+<tr>
+<td style="text-align: left;">bf01</td>
+<td style="text-align: left;">Played when using the Punching Bag in the Digifarm.</td>
+</tr>
+<tr>
+<td style="text-align: left;">fn02_01</td>
+<td style="text-align: left;">Sit. Used by NPCs.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<hr />
+<h2 id="textures">Textures</h2>
+<p>Textures are in DDS format but use the <code>.img</code> file extension. Simply rename the files to <code>.dds</code>, and you'll be able to edit them with any image editing software (<a href="https://paint.net/">Paint.net</a>, <a href="https://www.photopea.com/">Photopea</a>, etc.).<br />
+For more information, check the <a href="../../documentation/dststextures/">texture documentation</a>.</p>
 
 
 
