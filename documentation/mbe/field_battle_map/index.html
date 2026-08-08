@@ -1137,16 +1137,23 @@ E[004_battle_enemy_ai.csv]</code></pre>
 <li><strong>float 16</strong> = Rotation (<code>0</code> to <code>360</code>).  </li>
 <li><strong>string2 24</strong> = idle animation name. Default: <code>bn01</code>.  </li>
 <li><strong>string2 28</strong> = attack animation name.  </li>
-<li><strong>float 37</strong> = suspicion radius (<code>360</code> = can sense your presence from any angle).  </li>
+<li><strong>float 37</strong> = suspicion radius:<br />
+<code>360</code> = can sense your presence from any angle.<br />
+<code>-1</code> = can't sense your presence.  </li>
 <li><strong>float 45</strong> = specifies the angle within which the NPC can detect and attack the player:<br />
-<code>0</code> = does not attack the player.<br />
 <code>90</code> = only attacks the player when they are within a 90° cone in front.<br />
 <code>360</code> = can detect and attack the player from any angle.  </li>
 <li><strong>float 46</strong> = suspicion range. Distance at which the Digimon can sense the presence of the player.  </li>
 <li><strong>float 47</strong> = unknown. Changing this value decreases the suspicion range?  </li>
-<li><strong>bool 72</strong> = Defines whether the Digimon can be attacked with DigiAttack or not.<br />
+<li><strong>bool 72</strong> = defines whether the Digimon can be attacked with DigiAttack or not.<br />
 <code>false</code> = Digiattack enabled (default).<br />
 <code>true</code> = Digiattack disabled.  </li>
+<li><strong>bool 74</strong> = controls the visibility of the emote bubble.<br />
+<code>true</code> = emote bubble hidden.<br />
+<code>false</code> = emote bubble shown.  </li>
+<li><strong>bool 75</strong> = defines whether the Digimon is peaceful or attacks the player.<br />
+<code>true</code> = the Digimon is peaceful. It detects the player but doesn't attack.<br />
+<code>false</code> = the Digimon is hostile and attacks the player.  </li>
 <li><strong>int32 81</strong> = roaming type:<br />
 <code>0</code> = random.<br />
 <code>2</code> = static; does not roam.  </li>

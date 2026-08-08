@@ -1489,11 +1489,12 @@ They are located in the <code>data</code> and <code>text</code> folders inside t
 <ul>
 <li>Any text editor, like Windows Notepad, or <a href="https://notepad-plus-plus.org/">Notepad++</a> which has some <a href="https://www.youtube.com/watch?v=k6w5BcaSqHc">handy CSV plugins</a>.  </li>
 <li>
-<p>For files with a lot of columns, use <a href="https://www.libreoffice.org/download/">LibreOffice's Calc</a>. Make sure the character set is <code>Unicode (UTF-8)</code> when opening the files.  </p>
+<p>For files with a lot of columns, use <a href="https://www.libreoffice.org/download/">LibreOffice Calc</a>. Make sure the character set is <code>Unicode (UTF-8)</code> when opening the files.  </p>
 <p><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5eZcAB6asBpoXLAQJZ8aSvjs6HN_Esfk-iO7OOGIRDYP5Xratw1ArwuLaAOWnTPv98cEBBAjwtkWq6F51TmxVLhskZgmBbQOrGf3_OXdIjCi3OiJZSf7g4_PJ5NiaXHpywG1281DHF7G4IA7_sHiUOTaRRn9m1XOYhb6bdSOrCFsmmFF3g4h6TR9K1VQ/s659/extractdata0003.jpg"><img alt="Libreoffice Options" loading="lazy" src="../../assets/documentation/extractdata0003.webp" width="450" /></a></p>
 </li>
 </ul>
-<p>Alternatively, you can use <a href="https://www.moderncsv.com/download/">Modern CSV</a>, though some features are paywalled.</p>
+<p>If decimal numbers use commas (like <code>0,5</code> instead of <code>0.5</code>), change your region or the data may not work correctly in-game. Go to Tools → Options → Languages and Locales → General, then change the locale setting to "English (USA)".<br />
+As an alternative to LibreOffice, you can use <a href="https://www.moderncsv.com/download/">Modern CSV</a>, though some features are paywalled.  </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>Do NOT use Microsoft Excel</strong> to open CSV files. It changes the column format and causes a lot of problems.</p>
@@ -1733,7 +1734,7 @@ Since the game's Lua files are precompiled as Lua 5.2 bytecode, they must be dec
 </tr>
 <tr>
 <td style="text-align: left;">fq02</td>
-<td style="text-align: left;">Disagree (negative response).</td>
+<td style="text-align: left;">Disagree (negative response, used by wild spawns).</td>
 </tr>
 <tr>
 <td style="text-align: left;">r###_fn01</td>
