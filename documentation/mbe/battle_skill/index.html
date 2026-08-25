@@ -355,6 +355,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/outlines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model outlines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1479,9 +1507,9 @@
 <li><strong>int32 0</strong>: unique skill ID.  </li>
 <li><strong>int32 4</strong>: skill name ID (same as the skill ID). Set the name in text/skill_name.mbe.  </li>
 <li><strong>int32 5</strong>: skill description:<br />
-<code>0</code> = automatic description.<br />
-    Skill ID = unique description (set in <code>text/skill_explanation.mbe</code>).<br />
-<code>-1</code> = no description.</li>
+<code>0</code> = automatic description (procedurally generated).<br />
+<code>-1</code> = no description.<br />
+<code>Skill ID</code> = manually written description, defined in <code>text/skill_explanation.mbe</code>. Used for parameters that can't be generated automatically (e.g., the number of turns) or when automatically generated descriptions are too long, since they don't add line breaks and can make the text look squeezed.  </li>
 <li><strong>int32 6</strong>: unknown. Must use the same ID as the first column.  </li>
 </ul>
 <h3 id="visual-effects">Visual effects</h3>
@@ -1773,22 +1801,22 @@ Higher values are only used by bosses, which have larger gauges.  </li>
 </tr>
 <tr>
 <td style="text-align: left;"><code>9</code> = If target's HP is [#]% or higher</td>
-<td style="text-align: left;">HP percentage</td>
+<td style="text-align: left;">HP %</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>10</code> = If target's HP is [#] or lower</td>
-<td style="text-align: left;">HP percentage</td>
+<td style="text-align: left;"><code>10</code> = If target's HP is [#]% or lower</td>
+<td style="text-align: left;">HP %</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>11</code> = If target's SP is [#]% or higher</td>
-<td style="text-align: left;">SP percentage</td>
+<td style="text-align: left;">SP %</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>12</code> = If target's HP is [#]% or lower</td>
-<td style="text-align: left;">SP percentage</td>
+<td style="text-align: left;"><code>12</code> = If target's SP is [#]% or lower</td>
+<td style="text-align: left;">SP %</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>13</code> = If target's is KO'd</td>
+<td style="text-align: left;"><code>13</code> = If target is KO'd</td>
 <td style="text-align: left;">0</td>
 </tr>
 </tbody>
@@ -1978,7 +2006,7 @@ Higher values are only used by bosses, which have larger gauges.  </li>
 </ul>
 <div class="admonition bug">
 <p class="admonition-title">Bug</p>
-<p>Automatic skill descriptions always say "3 turns". If you change the amount of turns, the skill must use a <a href="#000_battle_skill_listcsv">custom description</a>.</p>
+<p>Automatic skill descriptions always say "3 turns". If you change the amount of turns, the skill must use a <a href="#000_battle_skill_listcsv">handwritten description</a>.</p>
 </div>
 <hr />
 <h2 id="003_skill_mode_changecsv">003_skill_mode_change.csv</h2>
