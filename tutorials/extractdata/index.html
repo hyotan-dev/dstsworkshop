@@ -1651,10 +1651,17 @@ Since the game's Lua files are precompiled as Lua 5.2 bytecode, they must be dec
 </table>
 <details class="info">
 <summary>How to install add-ons</summary>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/OCTvyo2FVFw?si=BUALH3tdg6sPfV-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/f-aJLbAjliQ?si=R4GQJB4Bk26wyQ0p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In Blender 4.5, instead of an <strong>Install</strong> button, you'll see a <img alt="🔽" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f53d.svg" title=":arrow_down_small:" /> arrow. Click it and select <strong>Install from Disk</strong>.</p>
+<p class="admonition-title">Steps</p>
+<ol>
+<li>Go to <strong>Edit → Preferences</strong>.  </li>
+<li>Select the <strong>Add-ons</strong> tab.  </li>
+<li>Click the <img alt="🔽" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f53d.svg" title=":arrow_down_small:" /> <strong>arrow</strong> in the upper right corner of the window.  </li>
+<li>Select <strong>Install from Disk</strong>.  </li>
+<li>Select the add-on file and click <strong>Install from disk</strong>.  </li>
+<li>Make sure the add-on is <strong>checked</strong> <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2705.svg" title=":white_check_mark:" /> . If not, click the checkbox next to it to activate it.  </li>
+</ol>
 </div>
 </details>
 <details class="info">
@@ -1665,7 +1672,7 @@ Since the game's Lua files are precompiled as Lua 5.2 bytecode, they must be dec
 <li>Time Stranger models contain many unnecessary vertices, which significantly increase the file size. To remove them, enter edit mode, select all and go to Mesh → Clean Up → Delete loose.</li>
 <li>Some meshes become invisible if they only have 1 weight. <a href="https://www.youtube.com/watch?v=SvbR00yiRHY">Assign a random bone</a> (preferably mvglDummy0000) with a weight of 0.001 to fix it.</li>
 <li>Edited/custom digimon models may have thicker outlines (<a href="https://www.youtube.com/watch?v=-3Bzm5BN26s">workaround</a>).</li>
-<li>Custom player models <a href="https://www.youtube.com/watch?v=RIpFDqG1BAY">can't use train terminals</a>.</li>
+<li>Custom player models <a href="https://www.youtube.com/watch?v=RIpFDqG1BAY">can't use train terminals</a>. There's <a href="https://gamebanana.com/mods/715292">a workaround mod</a> that disables the train terminal script, but keep in mind it's just a provisional fix.  </li>
 <li>When using a custom player model, the Palmon you call to travel between floating islands in the Gear Forest <a href="https://www.youtube.com/watch?v=uE7RlEBSBhc">will be invisible during the cutscene</a>.</li>
 <li>If your model has weird shadows, it's likely a weight normalization problem. The sum of all weights must be exactly "1". To fix it, enter weight paint mode and go to weights → normalize all.  </li>
 </ul>
