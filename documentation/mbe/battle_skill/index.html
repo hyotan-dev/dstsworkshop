@@ -1912,12 +1912,16 @@ Higher values are only used by bosses, which have larger gauges.  </li>
 <h3 id="buffs-and-debuffs">Buffs and Debuffs</h3>
 <p>(For more information, see <a href="#002_buff_setcsv">buff sets</a>)</p>
 <ul>
-<li><strong>int32 54</strong>: ID of the buff set applied to the <strong>target</strong>. I.e., if this value contains a poison buff set, the target will be poisoned after using the skill.<br />
+<li><strong>int32 54</strong>: ID of the buff set applied to the <strong>target</strong>. I.e., if this field contains a poison buff set, the target will be poisoned after using the skill.<br />
 If "int32 47" is <code>4</code>, this buff set is only applied if the conditions specified in "int32 46" are met.  </li>
-<li><strong>int32 56</strong>: ID of the buff set applied to the <strong>user</strong>. I.e., if this value contains a poison buff set, the user will be poisoned after using the skill.  </li>
-<li><strong>int32 58</strong>: ID of the buff set removed from the <strong>target</strong>. I.e., if this value contains a poison buff set, the target will be cured of poison.  </li>
-<li><strong>int32 60</strong>: ID of the buff set removed from the <strong>user</strong>. I.e., if this value contains a poison buff set, the user will be cured of poison.  </li>
+<li><strong>int32 56</strong>: ID of the buff set applied to the <strong>user</strong>. I.e., if this field contains a poison buff set, the user will be poisoned after using the skill.  </li>
+<li><strong>int32 58</strong>: ID of the buff set removed from the <strong>target</strong>. I.e., if this field contains a poison buff set, the target will be cured of poison.  </li>
+<li><strong>int32 60</strong>: ID of the buff set removed from the <strong>user</strong>. I.e., if this field contains a poison buff set, the user will be cured of poison.  </li>
 </ul>
+<div class="admonition bug">
+<p class="admonition-title">Bug</p>
+<p>Automatic skill descriptions don't specify whether a buff set is applied to the target or the user. To indicate who receives the buff or debuff, the skill must use a <a href="#000_battle_skill_listcsv">handwritten description</a>.</p>
+</div>
 <h3 id="form-change">Form change</h3>
 <ul>
 <li><strong>int32 61</strong>: <a href="#003_skill_mode_changecsv">mode change ID</a>. Causes a temporary form change in battle. Used by Imperialdramon, Cerberusmon, etc.  </li>
@@ -1934,11 +1938,11 @@ If "int32 47" is <code>4</code>, this buff set is only applied if the conditions
 </ul>
 <hr />
 <h2 id="002_buff_setcsv">002_buff_set.csv</h2>
-<p>This CSV controls buffs and debuffs (Paralysis, Instant Death, ATK Down, Taunting, etc.). Each buff set can have up to 11 buffs and/or debuffs.  </p>
+<p>This CSV controls buffs and debuffs (Paralysis, Instant Death, ATK Down, Taunting, etc.). Each buff set can have up to 11 buffs and/or debuffs. To add a buff set to a skill, see <a href="#buffs-and-debuffs">buffs and debuffs</a> in <code>000_battle_skill_list.csv</code>.  </p>
 <ul>
 <li><strong>int32 0</strong>: unique buff set ID.  </li>
 <li><strong>int32 1</strong>: buff message. <code>-1</code> = automatic. If you want to use a custom message, copy the ID from <code>text/buff_message.mbe</code>.  </li>
-<li><strong>int32 6</strong>: applied buff ID.  </li>
+<li><strong>int32 6</strong>: buff ID to be applied or dispelled.  </li>
 </ul>
 <details class="info">
 <summary>Buff IDs</summary>
