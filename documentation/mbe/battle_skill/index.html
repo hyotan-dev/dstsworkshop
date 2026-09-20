@@ -1910,11 +1910,13 @@ Higher values are only used by bosses, which have larger gauges.  </li>
 <li><strong>int32 52</strong>: conditional buff set. Checks whether the target is affected by a buff in <a href="#002_buff_setcsv">buff_set.csv</a> in order to apply an effect (for example, "extra damage if the target is affected by poison"). This field is always ignored unless the value in "int32 46" is <code>1</code> or <code>2</code>.  </li>
 </ul>
 <h3 id="buffs-and-debuffs">Buffs and Debuffs</h3>
+<p>(For more information, see <a href="#002_buff_setcsv">buff sets</a>)</p>
 <ul>
-<li><strong>int32 54</strong>: <a href="#002_buff_setcsv">buff set</a> 1 (Paralysis, Instant Death, ATK Down, Taunting, etc.). If "int32 47" is <code>4</code>, this buff set is only applied if the conditions specified in "int32 46" are met.  </li>
-<li><strong>int32 56</strong>: buff set 2.  </li>
-<li><strong>int32 58</strong>: buff set 3.  </li>
-<li><strong>int32 60</strong>: buff set 4.  </li>
+<li><strong>int32 54</strong>: ID of the buff set applied to the <strong>target</strong>. I.e., if this value contains a poison buff set, the target will be poisoned after using the skill.<br />
+If "int32 47" is <code>4</code>, this buff set is only applied if the conditions specified in "int32 46" are met.  </li>
+<li><strong>int32 56</strong>: ID of the buff set applied to the <strong>user</strong>. I.e., if this value contains a poison buff set, the user will be poisoned after using the skill.  </li>
+<li><strong>int32 58</strong>: ID of the buff set removed from the <strong>target</strong>. I.e., if this value contains a poison buff set, the target will be cured of poison.  </li>
+<li><strong>int32 60</strong>: ID of the buff set removed from the <strong>user</strong>. I.e., if this value contains a poison buff set, the user will be cured of poison.  </li>
 </ul>
 <h3 id="form-change">Form change</h3>
 <ul>
@@ -1932,7 +1934,7 @@ Higher values are only used by bosses, which have larger gauges.  </li>
 </ul>
 <hr />
 <h2 id="002_buff_setcsv">002_buff_set.csv</h2>
-<p>This CSV controls buffs and debuffs. Each buff set can have up to 11 buffs and/or debuffs.  </p>
+<p>This CSV controls buffs and debuffs (Paralysis, Instant Death, ATK Down, Taunting, etc.). Each buff set can have up to 11 buffs and/or debuffs.  </p>
 <ul>
 <li><strong>int32 0</strong>: unique buff set ID.  </li>
 <li><strong>int32 1</strong>: buff message. <code>-1</code> = automatic. If you want to use a custom message, copy the ID from <code>text/buff_message.mbe</code>.  </li>
