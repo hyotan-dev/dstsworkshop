@@ -1454,11 +1454,11 @@
 <code>6</code> = "Mega"<br />
 <code>7</code> = "Mega +"<br />
 <code>8</code> = "Armor" (Champion stats)<br />
-<code>9</code> = "Armor" (Ultimate or Mega stats, used by Rapidmon and Magnamon)<br />
-<code>10</code> = "Hybrid" (Champion stats, used by Human Spirits)<br />
-<code>11</code> = "Hybrid" (Champion stats, used by Beast Spirits)<br />
-<code>12</code> = "Hybrid" (Ultimate stats, used by Fused Spirits)<br />
-<code>13</code> = "Hybrid" (Mega stats, used by Transcendent Spirits)<br />
+<code>9</code> = "Armor" (Ultimate or Mega stats [Rapidmon and Magnamon])<br />
+<code>10</code> = "Hybrid" (<em>Human Spirits</em> with Champion stats [Agunimon, Lanamon and Lobomon])<br />
+<code>11</code> = "Hybrid" (<em>Beast Spirits</em> with Champion stats [BurningGreymon, Calmaramon and KendoGarurumon])<br />
+<code>12</code> = "Hybrid" (<em>Fused Spirits</em> with Ultimate stats [Aldamon and Beowolfmon])<br />
+<code>13</code> = "Hybrid" (<em>Transcendent Spirits</em> with Mega stats [EmperorGreymon and MagnaGarurumon])<br />
 <code>14</code> = "Cannot Train" (unused)  </p>
 </details>
 <h3 id="attributes">Attributes</h3>
@@ -1477,7 +1477,7 @@
 </details>
 <h3 id="elements-and-traits">Elements and Traits</h3>
 <ul>
-<li><strong>int32 7 to 17</strong>: Elemental resistances.<br />
+<li><strong>int32 7</strong> to <strong>int32 17</strong>: Elemental resistances.<br />
 <code>0</code> = neutral<br />
 <code>1</code> = weak <img alt="weak" src="../../../assets/documentation/digimon_status0001.webp" width="15" /><br />
 <code>2</code> = double weak <img alt="weak x2" src="../../../assets/documentation/digimon_status0002.webp" width="15" /><br />
@@ -1485,7 +1485,7 @@
 <code>4</code> = immune <img alt="immune" src="../../../assets/documentation/digimon_status0004.webp" width="15" />  </li>
 </ul>
 <details class="info">
-<summary>Columns</summary>
+<summary>Elemental resistances columns</summary>
 <p><code>int32 7</code> = Null resistance.<br />
 <code>int32 8</code> = Fire resistance.<br />
 <code>int32 9</code> = Water resistance.<br />
@@ -1499,11 +1499,12 @@
 <code>int32 17</code> = Dark resistance.  </p>
 </details>
 <ul>
-<li><strong>bol 19 to bol 60</strong>: traits.<br />
-<code>true</code> = has this trait. <code>false</code> = doesn't have this trait.</li>
+<li><strong>bol 19</strong> to <strong>bol 60</strong>: traits.<br />
+<code>true</code> = has this trait.<br />
+<code>false</code> = doesn't have this trait.</li>
 </ul>
 <details class="info">
-<summary>Colums</summary>
+<summary>Traits colums</summary>
 <ul>
 <li><strong>bol 19</strong>: Royal Knight.  </li>
 <li><strong>bol 20</strong>: Olympos XII.  </li>
@@ -1537,7 +1538,7 @@
 <li><strong>bol 48</strong>: Magic.  </li>
 <li><strong>bol 49</strong>: Ancient.  </li>
 <li><strong>bol 50</strong>: Alien.  </li>
-<li><strong>int32 51</strong>: Pixie (This is the only exception, use <code>1</code> or <code>0</code> instead of <code>true</code> or <code>false</code>).  </li>
+<li><strong>int32 51</strong>: Pixie. This is the only exception, use <code>1</code> or <code>0</code> instead of <code>true</code> or <code>false</code>.  </li>
 <li><strong>bol 52</strong>: Mythical.  </li>
 <li><strong>bol 53</strong>: Knight.  </li>
 <li><strong>bol 54</strong>: Warrior.  </li>
@@ -1599,28 +1600,51 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For more detailed information, check the CSVs inside <strong>digimon_growth.mbe</strong>. There's a file for each growth pattern with all the stats gained from level 1 to 99, including some unused ones (5, 6, 8, 9, 11, 12 and 15).</p>
+<p>For more detailed information, check the CSVs inside <strong>digimon_growth.mbe</strong>. There's a file for each growth pattern with all the stats gained from level 1 to 99, including some unused ones (<code>5</code>, <code>6</code>, <code>8</code>, <code>9</code>, <code>11</code>, <code>12</code> and <code>15</code>).</p>
 </div>
 </details>
 <h3 id="skills">Skills</h3>
 <h4 id="special-skills">Special Skills</h4>
 <ul>
-<li><strong>int32 72</strong>: first <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
-<li><strong>int32 74</strong>: skill slot occupied by the previous skill (always <code>1</code>).  </li>
-<li><strong>int32 75</strong>: second <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
-<li><strong>int32 77</strong>: skill slot occupied by the previous skill (always <code>2</code>).  </li>
-<li><strong>int32 78</strong>: third <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
-<li><strong>int32 80</strong>: skill slot occupied by the previous skill (always <code>3</code>).  </li>
-<li><strong>int32 81</strong>: fourth <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
-<li><strong>int32 83</strong>: skill slot occupied by the previous skill (always <code>4</code>).  </li>
+<li><strong>int32 72</strong>: 1st <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 74</strong>: voice ID used by the previous skill (should be <code>1</code>).  </li>
+<li><strong>int32 75</strong>: 2nd <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 77</strong>: voice ID used by the previous skill (should be <code>2</code>).  </li>
+<li><strong>int32 78</strong>: 3rd <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 80</strong>: voice ID used by the previous skill (should be <code>3</code>).  </li>
+<li><strong>int32 81</strong>: 4th <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 83</strong>: voice ID used by the previous skill (should be <code>4</code>).  </li>
 </ul>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>A Digimon can have up to 12 Special Skills, but adding more than 4 breaks the UI (weird things happen, like being unable to use Attachment Skills). Therefore, the following Special Skill columns (<code>84</code> to <code>107</code>) will be ignored and shouldn't be used.</p>
+<p class="admonition-title">Warning: adding more than 4 Special Skills</p>
+<p>A Digimon can have up to 12 Special Skills, but adding more than 4 breaks the UI (weird things happen, like being unable to use Attachment Skills). Therefore, the following Special Skill columns (<code>int32 84</code> to <code>int32 107</code>) should be ignored.</p>
+<details class="info">
+<summary>Unused Special Skill columns</summary>
+<ul>
+<li><strong>int32 84</strong>: 5th <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 86</strong>: voice ID used by the previous skill.  </li>
+<li><strong>int32 87</strong>: 6th <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 89</strong>: voice ID used by the previous skill.  </li>
+<li><strong>int32 90</strong>: 7th <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 92</strong>: voice ID used by the previous skill.  </li>
+<li><strong>int32 93</strong>: 8th <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 95</strong>: voice ID used by the previous skill.  </li>
+<li><strong>int32 96</strong>: 9th <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 98</strong>: voice ID used by the previous skill.  </li>
+<li><strong>int32 99</strong>: 10th <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 101</strong>: voice ID used by the previous skill.  </li>
+<li><strong>int32 102</strong>: 11th <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 104</strong>: voice ID used by the previous skill.  </li>
+<li><strong>int32 105</strong>: 12th <a href="../battle_skill/#000_battle_skill_listcsv">Special Skill ID</a>.  </li>
+<li><strong>int32 107</strong>: voice ID used by the previous skill.  </li>
+</ul>
+</details>
 </div>
 <details class="info">
 <summary>About Special Skill voice lines</summary>
-<p>Unlike the voice lines for other actions, which can be edited in <a href="../char_info/#voices">char_info.mbe</a>, the voice lines for Special Skills are hardcoded. For example, Omnimon will always use the "Transcendent Sword" voice line when using the Special Skill in slot 1, even if that skill isn't actually Transcendent Sword. Therefore, if you're adding a new Special Skill to an existing Digimon, it's best to use an empty slot instead.</p>
+<p>Unlike the voice lines for other actions, which can be edited in <a href="../char_info/#voices">char_info.mbe</a>, the voice lines used for Special Skills are hardcoded and determined by the first six characters of the model name.<br />
+For example, if you want a Digimon to use Omnimon's Special Skill voice lines, its model name must begin with <code>chr088</code>. It can be named <code>chr088111</code>, <code>chr088923</code>, or anything else, as long as the first six characters match Omnimon's model name.<br />
+At the moment, it is not possible to add new Special Skill voice lines.  </p>
 </details>
 <h4 id="attachment-skills">Attachment Skills</h4>
 <ul>
@@ -1819,32 +1843,48 @@
 </details>
 <details class="info">
 <summary>Suggested levels at which Attachment Skills are learned</summary>
+<ul>
+<li>
 <p>In Training I:<br />
 They don't learn Attachment Skills.  </p>
+</li>
+<li>
 <p>In Training II:<br />
 Skill 1: level 5.  </p>
+</li>
+<li>
 <p>Rookie:<br />
 Skill 1: level 2.<br />
 Skill 2: level 10.  </p>
+</li>
+<li>
 <p>Champion:<br />
 Skill 1: level 2.<br />
 Skill 2: level 15.<br />
 Skill 3: level 25.  </p>
+</li>
+<li>
 <p>Ultimate:<br />
 Skill 1: level 2.<br />
 Skill 2: level 20.<br />
 Skill 3: level 30.<br />
 Skill 4: level 40.  </p>
+</li>
+<li>
 <p>Mega:<br />
 Skill 1: level 2.<br />
 Skill 2: level 25.<br />
 Skill 3: level 35.<br />
 Skill 4: level 45.  </p>
+</li>
+<li>
 <p>Mega +:<br />
 Skill 1: level 2.<br />
 Skill 2: level 25.<br />
 Skill 3: level 35.<br />
 Skill 4: level 45.  </p>
+</li>
+</ul>
 </details>
 <ul>
 <li><strong>int32 126</strong>: unknown. Must be the same ID as the special skill in slot 1 (<a href="#special-skills">int32 72</a>).  </li>
@@ -1856,7 +1896,7 @@ Skill 4: level 45.  </p>
 </ul>
 <h3 id="dlc">DLC</h3>
 <ul>
-<li><strong>int32 133</strong>: DLC required. Must contain the DLC flag ID. Only Parallelmon uses this column.</li>
+<li><strong>int32 133</strong>: ID of the DLC required for the Digimon to be obtainable. Only Parallelmon uses this column (<code>29905</code>).  </li>
 </ul>
 
 

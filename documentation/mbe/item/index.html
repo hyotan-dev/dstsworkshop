@@ -913,10 +913,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#digifarm" class="md-nav__link">
+  <a href="#thumbnail" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Digifarm
+        Thumbnail
       
     </span>
   </a>
@@ -1296,10 +1296,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#digifarm" class="md-nav__link">
+  <a href="#thumbnail" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Digifarm
+        Thumbnail
       
     </span>
   </a>
@@ -1482,7 +1482,7 @@
 <li><strong>int32 0</strong>: unique item ID.  </li>
 <li><strong>int32 4</strong>: item name ID (same as the item ID). Set the name in <code>text/item_name.mbe</code>.  </li>
 <li><strong>int32 5</strong>: item description ID. <code>0</code> = automatic description. Item ID = unique description (set in <code>text/item_explanation.mbe</code>).  </li>
-<li><strong>int32 6</strong>: item category. </li>
+<li><strong>int32 6</strong>: item category. Determines which tab an item appears under in the shop menu and inventory.  </li>
 </ul>
 <details class="info">
 <summary>Categories</summary>
@@ -1608,9 +1608,9 @@
 <ul>
 <li><strong>int32 26</strong>: costume ID (from <code>model_costume_change.mbe</code>). If the item is in the player's bag, it unlocks the corresponding costume/outfit. The <a href="#basic-parameters">item's category</a> must be set to <code>7</code> for the costume to be equippable.  </li>
 </ul>
-<h3 id="digifarm">Digifarm</h3>
+<h3 id="thumbnail">Thumbnail</h3>
 <ul>
-<li><strong>string2 27</strong>: Image filename (without file extension) used as thumbnail in the Digifarm and Zudomon's crafting shop.  </li>
+<li><strong>string2 27</strong>: Image filename (without file extension) used as thumbnail in the Digifarm and shops. Only appears if the <a href="#basic-parameters">item category</a> is <code>6</code> (farm item).  </li>
 </ul>
 <hr />
 <h2 id="001_equip_parametercsv">001_equip_parameter.csv</h2>
