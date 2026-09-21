@@ -1927,10 +1927,13 @@ If "int32 47" is <code>4</code>, this buff set is only applied if the conditions
 <li><strong>int32 61</strong>: <a href="#003_skill_mode_changecsv">mode change ID</a>. Causes a temporary form change in battle. Used by Imperialdramon, Cerberusmon, etc.  </li>
 </ul>
 <h3 id="dna-digivolution">DNA Digivolution</h3>
+<p>These skills let you temporarily fuse two compatible Digimon during combat. For example, WarGreymon and MetalGarurumon can fuse into Omnimon.  </p>
 <ul>
-<li><strong>int32 63</strong>: Is it a DNA Digivolution skill?: <code>0</code> = no. <code>1</code> = yes. These skills let you temporarily fuse two Digimon in combat if they are compatible, for example, Wargreymon and MetalGarurumon into Omnimon.  </li>
-<li><strong>int32 64</strong>: ID of the first Digimon (only use if "int32 63" is <code>1</code>, otherwise, always <code>-1</code>).  </li>
-<li><strong>int32 65</strong>: ID of the second Digimon (only use if "int32 63" is <code>1</code>, otherwise, always <code>-1</code>).  </li>
+<li><strong>int32 63</strong>: Is it a DNA Digivolution skill?:<br />
+<code>0</code> = no.<br />
+<code>1</code> = yes.  </li>
+<li><strong>int32 64</strong>: <a href="../digimon_status/#ids">ID</a> of the first Digimon (<code>-1</code> = none).  </li>
+<li><strong>int32 65</strong>: <a href="../digimon_status/#ids">ID</a> of the second Digimon (<code>-1</code> = none).  </li>
 </ul>
 <h3 id="misc">Misc.</h3>
 <ul>

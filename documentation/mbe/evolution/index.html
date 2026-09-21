@@ -703,6 +703,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="000_evolution_condition.csv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#item-requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Item requirement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dna-digivolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNA Digivolution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1093,6 +1132,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="000_evolution_condition.csv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#item-requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Item requirement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dna-digivolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNA Digivolution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1211,25 +1289,29 @@
 <h1 id="evolutionmbe">evolution.mbe</h1>
 <p>This MBE controls evolution lines and requirements.  </p>
 <h2 id="000_evolution_conditioncsv">000_evolution_condition.csv</h2>
-<p>Controls evolution requirements to evolve into a Digimon.  </p>
+<p>Controls evolution requirements for each Digimon species.  </p>
+<h3 id="basic-requirements">Basic requirements</h3>
 <ul>
-<li><strong>int32 0</strong>: Digimon ID.  </li>
+<li><strong>int32 0</strong>: <a href="../digimon_status/#ids">Digimon ID</a>.  </li>
 <li><strong>int32 2</strong>: agent level.  </li>
-<li><strong>int32 3</strong>: minimum Digimon level.  </li>
-<li><strong>int32 4</strong>: HP.  </li>
-<li><strong>int32 5</strong>: SP.  </li>
-<li><strong>int32 6</strong>: ATK.  </li>
-<li><strong>int32 7</strong>: DEF.  </li>
-<li><strong>int32 8</strong>: INT.  </li>
-<li><strong>int32 9</strong>: SPI.  </li>
-<li><strong>int32 10</strong>: SPD.  </li>
+<li><strong>int32 3</strong>: Digimon level.  </li>
+<li><strong>int32 4</strong>: HP <img alt="♥" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2665.svg" title=":hearts:" />  </li>
+<li><strong>int32 5</strong>: SP <img alt="✨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2728.svg" title=":sparkles:" />  </li>
+<li><strong>int32 6</strong>: ATK <img alt="⚔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2694.svg" title=":crossed_swords:" />  </li>
+<li><strong>int32 7</strong>: DEF <img alt="🛡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f6e1.svg" title=":shield:" /> <img alt="🪓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1fa93.svg" title=":axe:" />  </li>
+<li><strong>int32 8</strong>: INT <img alt="🪄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1fa84.svg" title=":magic_wand:" />  </li>
+<li><strong>int32 9</strong>: SPI <img alt="🛡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f6e1.svg" title=":shield:" /> <img alt="⚡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a1.svg" title=":zap:" />  </li>
+<li><strong>int32 10</strong>: SPD <img alt="🏃‍♂️‍➡️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f3c3-200d-2642-fe0f-200d-27a1-fe0f.svg" title=":man_running_facing_right:" />  </li>
 <li><strong>int32 11</strong>: Talent.  </li>
 <li><strong>int32 12</strong>: Bond percentage.  </li>
 <li><strong>int32 13</strong>: Bonds of Valor Agent Skills learned.  </li>
 <li><strong>int32 14</strong>: Bonds of Philanthropy Agent Skills learned.  </li>
 <li><strong>int32 15</strong>: Bonds of Amicability Agent Skills learned.  </li>
 <li><strong>int32 16</strong>: Bonds of Wisdom Agent Skills learned.  </li>
-<li><strong>int32 22</strong>: evolution item obtained.  </li>
+</ul>
+<h3 id="item-requirement">Item requirement</h3>
+<ul>
+<li><strong>int32 22</strong>: <a href="../item/#basic-parameters">ID</a> of the required item. The item must be in your bag, but is not consumed.  </li>
 </ul>
 <details class="info">
 <summary>Evolution item IDs</summary>
@@ -1250,9 +1332,11 @@
 <code>915</code> = Beast Spirit of Light<br />
 <code>916</code> = Omni Blade  </p>
 </details>
+<h3 id="dna-digivolution">DNA Digivolution</h3>
+<p>Use only if the Digimon is the result of a fusion.  </p>
 <ul>
-<li><strong>int32 24</strong>: DNA Digivolution: first Digimon ID.  </li>
-<li><strong>int32 26</strong>: DNA Digivolution: first Digimon personality.  </li>
+<li><strong>int32 24</strong>: <a href="../digimon_status/#ids">ID</a> of the first Digimon to be fused.  </li>
+<li><strong>int32 26</strong>: personality of the first Digimon.  </li>
 </ul>
 <details class="info">
 <summary>Personality IDs</summary>
@@ -1274,17 +1358,20 @@
 <code>16</code>: Sly.  </p>
 </details>
 <ul>
-<li><strong>int32 27</strong>: DNA Digivolution: second Digimon ID.  </li>
-<li><strong>int32 29</strong>: DNA Digivolution: second Digimon personality.  </li>
+<li><strong>int32 27</strong>: <a href="../digimon_status/#ids">ID</a> of the second Digimon to be fused.  </li>
+<li><strong>int32 29</strong>: personality of the second Digimon.  </li>
 </ul>
+<p>For temporary DNA Digivolution in battle, check <a href="../battle_skill/#dna-digivolution">battle_skill.mbe</a>.</p>
 <hr />
 <h2 id="001_evolution_tocsv">001_evolution_to.csv</h2>
-<p>Controls evolution lines (determines which Digimon evolves into another).  </p>
+<p>Controls evolution lines. Determines which Digimon evolves into another.  </p>
 <ul>
 <li><strong>int32 0</strong>: unique ID for each evolution.  </li>
 <li><strong>int32 1</strong>: ID of the Digimon that will evolve.  </li>
 <li><strong>int32 3</strong>: ID of the Digimon it evolves into.  </li>
-<li><strong>int32 5</strong>: <code>0</code> = normal evolution. <code>2</code> = form change.  </li>
+<li><strong>int32 5</strong>: Evolution type.<br />
+<code>0</code> = normal evolution.<br />
+<code>2</code> = form change.  </li>
 <li><strong>int32 6 to 10</strong>: DLC requirement flags. only used by Parallelmon (flag <code>27500</code>) and the Special Agumon and Gabumon from the Ultimate Edition early unlock (flag <code>29905</code>).  </li>
 </ul>
 <div class="admonition info">
