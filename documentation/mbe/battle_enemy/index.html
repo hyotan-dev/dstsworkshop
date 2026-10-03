@@ -1349,30 +1349,30 @@ E[004_battle_enemy_ai.csv]</code></pre>
 </details>
 <h2 id="000_enemy_parametercsv">000_enemy_parameter.csv</h2>
 <ul>
-<li><strong>int32 0</strong> = unique enemy ID. This value must be the Digimon's ID from <a href="../digimon_status/#000_digimon_status_datacsv">digimon_status.mbe</a>, followed by <code>01</code>. For example Gabumon's ID is <code>151</code>, so its enemy ID should be <code>15101</code>.  </li>
+<li><strong>int32 0</strong>: unique enemy ID. This value must be the Digimon's ID from <a href="../digimon_status/#000_digimon_status_datacsv">digimon_status.mbe</a>, followed by <code>01</code>. For example Gabumon's ID is <code>151</code>, so its enemy ID should be <code>15101</code>.  </li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>To create multiple variants of the same Digimon with different parameters for different battles, replace the trailing <code>01</code> with <code>02</code>, <code>03</code>, and so on. For example, <code>15102</code> and <code>15103</code> would represent additional variants of Gabumon.</p>
 </div>
 <ul>
-<li><strong>int32 2</strong> = base Digimon ID from <a href="../digimon_status/#000_digimon_status_datacsv">digimon_status.mbe</a>.  </li>
-<li><strong>int32 5</strong> = Same number used in column <strong>int32 0</strong>.  </li>
+<li><strong>int32 2</strong>: base Digimon ID from <a href="../digimon_status/#000_digimon_status_datacsv">digimon_status.mbe</a>.  </li>
+<li><strong>int32 5</strong>: Same number used in column <strong>int32 0</strong>.  </li>
 </ul>
 <h3 id="enemy-battle-stats">Enemy battle stats</h3>
 <p>(Stats used in battle. Overrides base stats from <code>digimon_status.mbe</code>)</p>
 <ul>
-<li><strong>int32 17</strong> = base HP (at level 1).  </li>
-<li><strong>int32 18</strong> = base SP (at level 1).  </li>
-<li><strong>int32 19</strong> = base ATK (at level 1).  </li>
-<li><strong>int32 20</strong> = base DEF (at level 1).  </li>
-<li><strong>int32 21</strong> = base INT (at level 1).  </li>
-<li><strong>int32 22</strong> = base SPI (at level 1).  </li>
-<li><strong>int32 23</strong> = base SPD (at level 1).  </li>
+<li><strong>int32 17</strong>: base HP (at level 1).  </li>
+<li><strong>int32 18</strong>: base SP (at level 1).  </li>
+<li><strong>int32 19</strong>: base ATK (at level 1).  </li>
+<li><strong>int32 20</strong>: base DEF (at level 1).  </li>
+<li><strong>int32 21</strong>: base INT (at level 1).  </li>
+<li><strong>int32 22</strong>: base SPI (at level 1).  </li>
+<li><strong>int32 23</strong>: base SPD (at level 1).  </li>
 </ul>
 <h3 id="buff-resistance">Buff Resistance</h3>
 <ul>
-<li><strong>int32 32</strong> = ID from <code>battle_buff.mbe/001_buff_resist_set.csv</code>.<br />
+<li><strong>int32 32</strong>: ID from <code>battle_buff.mbe/001_buff_resist_set.csv</code>.<br />
 <code>0</code> = no buff resistances.</li>
 </ul>
 <h3 id="experience-and-money">Experience and money</h3>
@@ -1455,14 +1455,14 @@ Therefore, at level 10, it grants <code>76</code> yen in total (<code>40 + [4 ×
 </details>
 <h3 id="item-drops">Item drops</h3>
 <ul>
-<li><strong>int32 37</strong> = first item dropped when the enemy is defeated (<code>0</code> = none).  </li>
-<li><strong>int32 39</strong> = first item drop rate (<code>0</code> to <code>100</code>).  </li>
-<li><strong>int32 40</strong> = second item dropped when the enemy is defeated (<code>0</code> = none).  </li>
-<li><strong>int32 42</strong> = second item drop rate (<code>0</code> to <code>100</code>).  </li>
+<li><strong>int32 37</strong>: first item dropped when the enemy is defeated (<code>0</code> = none).  </li>
+<li><strong>int32 39</strong>: first item drop rate (<code>0</code> to <code>100</code>).  </li>
+<li><strong>int32 40</strong>: second item dropped when the enemy is defeated (<code>0</code> = none).  </li>
+<li><strong>int32 42</strong>: second item drop rate (<code>0</code> to <code>100</code>).  </li>
 </ul>
 <h3 id="scan-rate">Scan rate</h3>
 <ul>
-<li><strong>int32 43</strong> = scan percentage added when the enemy is defeated (<code>0</code> to <code>200</code>).</li>
+<li><strong>int32 43</strong>: scan percentage added when the enemy is defeated (<code>0</code> to <code>200</code>).</li>
 </ul>
 <details class="info">
 <summary>Suggested scan rates</summary>
@@ -1512,32 +1512,32 @@ Therefore, at level 10, it grants <code>76</code> yen in total (<code>40 + [4 ×
 <h2 id="001_encount_groupcsv">001_encount_group.csv</h2>
 <p>Controls the groups of enemies that spawn during a battle. The enemy in the first slot (<code>int32 2</code>) determines the model used by the wild spawn <a href="../field_battle_map/">field_battle_map.csv</a>. Even if the battle only has one enemy, it must have an entry in this CSV.  </p>
 <ul>
-<li><strong>int32 0</strong> = unique encounter group ID.  </li>
-<li><strong>int32 2</strong> = first enemy ID (from <a href="#000_enemy_parametercsv">000_enemy_parameter.csv</a>).  </li>
+<li><strong>int32 0</strong>: unique encounter group ID.  </li>
+<li><strong>int32 2</strong>: first enemy ID (from <a href="#000_enemy_parametercsv">000_enemy_parameter.csv</a>).  </li>
 </ul>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
 <p>The model of the enemy in the first slot must always start with <code>chr</code> or the game will crash.</p>
 </div>
 <ul>
-<li><strong>int32 6</strong> = first enemy spawn chance (for the first enemy, always <code>100</code> or game crashes).  </li>
-<li><strong>int32 8</strong> = first enemy level.  </li>
-<li><strong>int32 9</strong> = first enemy level in <strong>Mega</strong> difficulty.  </li>
-<li><strong>int32 10</strong> = first enemy level in <strong>Mega +</strong> difficulty.  </li>
-<li><strong>int32 14</strong> = second enemy ID.  </li>
-<li><strong>int32 18</strong> = second enemy spawn chance (<code>0</code> to <code>100</code>).  </li>
-<li><strong>int32 20</strong> = second enemy level.  </li>
-<li><strong>int32 21</strong> = second enemy level in <strong>Mega</strong> difficulty.  </li>
-<li><strong>int32 22</strong> = second enemy level <strong>Mega +</strong> difficulty.  </li>
-<li><strong>int32 26</strong> = third enemy ID.  </li>
-<li><strong>int32 30</strong> = third enemy spawn chance (<code>0</code> to <code>100</code>).  </li>
-<li><strong>int32 32</strong> = third enemy level.  </li>
-<li><strong>int32 33</strong> = third enemy level in <strong>Mega</strong> difficulty.  </li>
-<li><strong>int32 34</strong> = third enemy level <strong>Mega +</strong> difficulty.  </li>
-<li><strong>int32 38</strong> to <strong>int32 74</strong> = fourth to sixth enemy. Unused. Normal battles only allow 3 enemies per battle.  </li>
-<li><strong>string2 75</strong> = lua script used during this battle.<br />
-<code>(empty)</code> = normal battle, no special scripts, no Surprise Encounters.<br />
-<code>battle_00000000</code> = normal battle with 1% chance of getting a Surprise Encounter.  </li>
+<li><strong>int32 6</strong>: first enemy spawn chance (for the first enemy, always <code>100</code> or game crashes).  </li>
+<li><strong>int32 8</strong>: first enemy level.  </li>
+<li><strong>int32 9</strong>: first enemy level in <strong>Mega</strong> difficulty.  </li>
+<li><strong>int32 10</strong>: first enemy level in <strong>Mega +</strong> difficulty.  </li>
+<li><strong>int32 14</strong>: second enemy ID.  </li>
+<li><strong>int32 18</strong>: second enemy spawn chance (<code>0</code> to <code>100</code>).  </li>
+<li><strong>int32 20</strong>: second enemy level.  </li>
+<li><strong>int32 21</strong>: second enemy level in <strong>Mega</strong> difficulty.  </li>
+<li><strong>int32 22</strong>: second enemy level <strong>Mega +</strong> difficulty.  </li>
+<li><strong>int32 26</strong>: third enemy ID.  </li>
+<li><strong>int32 30</strong>: third enemy spawn chance (<code>0</code> to <code>100</code>).  </li>
+<li><strong>int32 32</strong>: third enemy level.  </li>
+<li><strong>int32 33</strong>: third enemy level in <strong>Mega</strong> difficulty.  </li>
+<li><strong>int32 34</strong>: third enemy level <strong>Mega +</strong> difficulty.  </li>
+<li><strong>int32 38</strong> to <strong>int32 74</strong>: fourth to sixth enemy. Unused. Normal battles only allow 3 enemies per battle.  </li>
+<li><strong>string2 75</strong>: lua script filename. Used for surprise encounters and boss battles.<br />
+<code>(empty)</code> = normal battle, no Surprise Encounters.<br />
+<code>battle_00000000</code> = normal battle. 1% chance of getting a <em>Surprise Encounter</em>.  </li>
 </ul>
 <details class="info">
 <summary>Surprise Encounter odds</summary>
@@ -1567,9 +1567,10 @@ Therefore, at level 10, it grants <code>76</code> yen in total (<code>40 + [4 ×
 </tr>
 </tbody>
 </table>
+<p>When a battle starts, the game rolls a number from <code>1</code> to <code>10000</code>. If the result is between <code>1</code> and <code>35</code>, PlatinumNumemon appears. Between <code>36</code> and <code>65</code>, GoldNumemon appears. Between <code>66</code> and <code>85</code>, BlackKingNumemon appears. And between <code>86</code> and <code>100</code>, Digitamamon appears. If the number is higher than <code>100</code>, no surprise encounter appears.  </p>
 </details>
 <ul>
-<li><strong>int32 80</strong> = battle formation. Determines camera setup and the positioning of enemies during battle.<br />
+<li><strong>int32 80</strong>: battle formation. Determines camera setup and the positioning of enemies during battle.<br />
 <code>803</code> = standard battle formation used by most encounters.<br />
 <code>201</code> = enemies are positioned slightly closer to the player's party.<br />
 <code>143</code> = enemies are positioned slightly farther from the player's party.<br />

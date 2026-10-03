@@ -1479,24 +1479,24 @@
 <ul>
 <li><strong>int32 7</strong> to <strong>int32 17</strong>: Elemental resistances.<br />
 <code>0</code> = neutral<br />
-<code>1</code> = weak <img alt="weak" src="../../../assets/documentation/digimon_status0001.webp" width="15" /><br />
-<code>2</code> = double weak <img alt="weak x2" src="../../../assets/documentation/digimon_status0002.webp" width="15" /><br />
-<code>3</code> = resist <img alt="resist" src="../../../assets/documentation/digimon_status0003.webp" width="15" /><br />
-<code>4</code> = immune <img alt="immune" src="../../../assets/documentation/digimon_status0004.webp" width="15" />  </li>
+<code>1</code> = weak <span style="color: #8dc1fb;"><b>⭘</b></span><br />
+<code>2</code> = double weak <span style="color: #8dc1fb;">⦿</span>  <br />
+<code>3</code> = resist <span style="color: #ed7791;"><b>△</b></span><br />
+<code>4</code> = immune <span style="color: #ed7791;">X</span>  </li>
 </ul>
 <details class="info">
 <summary>Elemental resistances columns</summary>
-<p><code>int32 7</code> = Null resistance.<br />
-<code>int32 8</code> = Fire resistance.<br />
-<code>int32 9</code> = Water resistance.<br />
-<code>int32 10</code> = Ice resistance.<br />
-<code>int32 11</code> = Plant resistance.<br />
-<code>int32 12</code> = Wind resistance.<br />
-<code>int32 13</code> = Electricity resistance.<br />
-<code>int32 14</code> = Earth resistance.<br />
-<code>int32 15</code> = Steel resistance.<br />
-<code>int32 16</code> = Light resistance.<br />
-<code>int32 17</code> = Dark resistance.  </p>
+<p><code>int32 7</code> = Null resistance <img alt="➖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2796.svg" title=":heavy_minus_sign:" /> <br />
+<code>int32 8</code> = Fire resistance <img alt="🔥" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f525.svg" title=":fire:" /><br />
+<code>int32 9</code> = Water resistance <img alt="💧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a7.svg" title=":droplet:" /><br />
+<code>int32 10</code> = Ice resistance <img alt="❄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2744.svg" title=":snowflake:" /><br />
+<code>int32 11</code> = Plant resistance <img alt="🌱" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f331.svg" title=":seedling:" /><br />
+<code>int32 12</code> = Wind resistance <img alt="🌪" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f32a.svg" title=":cloud_tornado:" /><br />
+<code>int32 13</code> = Electricity resistance <img alt="⚡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a1.svg" title=":zap:" /><br />
+<code>int32 14</code> = Earth resistance <img alt="🟤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f7e4.svg" title=":brown_circle:" /><br />
+<code>int32 15</code> = Steel resistance <img alt="🔩" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f529.svg" title=":nut_and_bolt:" /><br />
+<code>int32 16</code> = Light resistance <img alt="🔱" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f531.svg" title=":trident:" /><br />
+<code>int32 17</code> = Dark resistance <img alt="🔮" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f52e.svg" title=":crystal_ball:" />  </p>
 </details>
 <ul>
 <li><strong>bol 19</strong> to <strong>bol 60</strong>: traits.<br />
@@ -1556,23 +1556,27 @@
 </ul>
 <details class="info">
 <summary>Personality IDs</summary>
-<p><code>0</code> = – (used by NPCs).<br />
-<code>1</code> = Brave.<br />
-<code>2</code> = Zealous.<br />
-<code>3</code> = Daring.<br />
-<code>4</code> = Reckless.<br />
-<code>5</code> = Adoring.<br />
-<code>6</code> = Devoted.<br />
-<code>7</code> = Tolerant.<br />
-<code>8</code> = Overprotective.<br />
-<code>9</code> = Compassionate.<br />
-<code>10</code> = Sociable.<br />
-<code>11</code> = Friendly.<br />
-<code>12</code> = Opportunistic.<br />
-<code>13</code> = Astute.<br />
-<code>14</code> = Strategic.<br />
-<code>15</code> = Enlightened.<br />
-<code>16</code> = Sly.  </p>
+<p><code>0</code> = none (used by NPCs).  </p>
+<p><span style="color: #fb5c00;"><b>Valor</b> (+ ATK):</span>  </p>
+<p><code>1</code> = Brave (+ SP).<br />
+<code>2</code> = Zealous (+ SPD).<br />
+<code>3</code> = Daring (+ DEF).<br />
+<code>4</code> = Reckless (+ HP).  </p>
+<p><span style="color: #ff7cbe;"><b>Philanthropy</b> (+ SPI):</span>  </p>
+<p><code>5</code> = Adoring (+ DEF).<br />
+<code>6</code> = Devoted (+ INT).<br />
+<code>7</code> = Tolerant (+ SP).<br />
+<code>8</code> = Overprotective (+ HP).  </p>
+<p><span style="color: #4a93ff;"><b>Amicability</b> (+ DEF):</span>  </p>
+<p><code>9</code> = Compassionate (+ HP).<br />
+<code>10</code> = Sociable (+ SP).<br />
+<code>11</code> = Friendly (+ ATK).<br />
+<code>12</code> = Opportunistic (+ SPI).  </p>
+<p><span style="color: #b109ff;"><b>Wisdom</b> (+ INT):</span>  </p>
+<p><code>13</code> = Astute (+ SPD).<br />
+<code>14</code> = Strategic (+ SPI).<br />
+<code>15</code> = Enlightened (+ SP).<br />
+<code>16</code> = Sly (+ HP).  </p>
 </details>
 <h3 id="stats">Stats</h3>
 <ul>
@@ -1891,8 +1895,11 @@ Skill 4: level 45.  </p>
 </ul>
 <h3 id="field-guide">Field Guide</h3>
 <ul>
-<li><strong>int32 131</strong>: unique field guide ID. Must be a number from 477 to 999. Lower numbers are already in use, and higher numbers crash the game.  </li>
-<li><strong>int32 132</strong>: field guide text ID. Same ID used in the first column (<a href="#ids">int32 0</a>).  </li>
+<li><strong>int32 131</strong>: unique field guide ID.<br />
+Must be a number from <code>477</code> to <code>999</code>. Lower numbers are already in use, and higher numbers crash the game.<br />
+<code>-1</code> = doesn't appear in the field guide.  </li>
+<li><strong>int32 132</strong>: field guide description ID from <code>text/digimon_profile.mbe</code>. Normally matches the ID in the first column (<a href="#ids">int32 0</a>).<br />
+To use the field guide description of an existing Digimon, enter its ID here.  </li>
 </ul>
 <h3 id="dlc">DLC</h3>
 <ul>
