@@ -712,10 +712,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#elements-and-traits" class="md-nav__link">
+  <a href="#elements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Elements and Traits
+        Elements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traits
       
     </span>
   </a>
@@ -1241,10 +1252,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#elements-and-traits" class="md-nav__link">
+  <a href="#elements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Elements and Traits
+        Elements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traits
       
     </span>
   </a>
@@ -1479,9 +1501,9 @@
 <p>Attributes <code>3</code> through <code>6</code> are functionally identical, neither advantageous nor disadvantageous against other attributes, but have different names for lore reasons.</p>
 </div>
 </details>
-<h3 id="elements-and-traits">Elements and Traits</h3>
+<h3 id="elements">Elements</h3>
 <ul>
-<li><strong>int32 7</strong> to <strong>int32 17</strong>: Elemental resistances.<br />
+<li><strong>int32 7</strong> to <strong>int32 17</strong>: elemental resistances.<br />
 <code>0</code> = neutral<br />
 <code>1</code> = weak <span style="color: #8dc1fb;"><b>⭘</b></span><br />
 <code>2</code> = double weak <span style="color: #8dc1fb;">⦿</span>  <br />
@@ -1502,6 +1524,7 @@
 <code>int32 16</code> = Light resistance <img alt="🔱" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f531.svg" title=":trident:" /><br />
 <code>int32 17</code> = Dark resistance <img alt="🔮" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f52e.svg" title=":crystal_ball:" />  </p>
 </details>
+<h3 id="traits">Traits</h3>
 <ul>
 <li><strong>bol 19</strong> to <strong>bol 60</strong>: traits.<br />
 <code>true</code> = has this trait.<br />
@@ -1553,7 +1576,15 @@
 <li><strong>bol 59</strong>: Puppet.  </li>
 <li><strong>bol 60</strong>: Unknown.  </li>
 </ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>If column <code>bol 59</code> is set to <code>true</code>, your Digimon will have the Puppet trait.</p>
+</div>
 </details>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It's currently not possible to check your own Digimon's traits in-game, but you can check enemy traits in battle.</p>
+</div>
 <h3 id="personality">Personality</h3>
 <ul>
 <li><strong>int32 61</strong>: base personality ID.</li>
@@ -1656,198 +1687,199 @@ At the moment, it is not possible to add new Special Skill voice lines.  </p>
 </details>
 <h4 id="attachment-skills">Attachment Skills</h4>
 <ul>
-<li><strong>int32 108</strong>: learnable Attachment Skill 1.  </li>
+<li><strong>int32 108</strong>: learnable <a href="../battle_skill/#000_battle_skill_listcsv">Attachment Skill</a> 1.  </li>
 <li><strong>int32 110</strong>: Level at which the previous skill is learned.  </li>
-<li><strong>int32 111</strong>: learnable Attachment Skill 2.  </li>
+<li><strong>int32 111</strong>: learnable <a href="../battle_skill/#000_battle_skill_listcsv">Attachment Skill</a> 2.  </li>
 <li><strong>int32 113</strong>: Level at which the previous skill is learned.  </li>
-<li><strong>int32 114</strong>: learnable Attachment Skill 3.  </li>
+<li><strong>int32 114</strong>: learnable <a href="../battle_skill/#000_battle_skill_listcsv">Attachment Skill</a> 3.  </li>
 <li><strong>int32 116</strong>: Level at which the previous skill is learned.  </li>
-<li><strong>int32 117</strong>: learnable Attachment Skill 4.  </li>
+<li><strong>int32 117</strong>: learnable <a href="../battle_skill/#000_battle_skill_listcsv">Attachment Skill</a> 4.  </li>
 <li><strong>int32 119</strong>: Level at which the previous skill is learned.  </li>
 </ul>
 <details class="info">
 <summary>Attachment Skill IDs</summary>
-<p>30011 = Wolkenapalm I<br />
-30012 = Wolkenapalm II<br />
-30013 = Wolkenapalm III<br />
-30021 = Burst Flame I<br />
-30022 = Burst Flame II<br />
-30023 = Burst Flame III<br />
-30031 = Magma Fall I<br />
-30032 = Magma Fall II<br />
-30033 = Magma Fall III<br />
-30034 = Ignition Flare I<br />
-30035 = Ignition Flare II<br />
-30036 = Ignition Flare III<br />
-30041 = Aqua Pressure I<br />
-30042 = Aqua Pressure II<br />
-30043 = Aqua Pressure III<br />
-30051 = Hydro Water I<br />
-30052 = Hydro Water II<br />
-30053 = Hydro Water III<br />
-30061 = Ocean Wave I<br />
-30062 = Ocean Wave II<br />
-30063 = Ocean Wave III<br />
-30064 = Tidal Stream I<br />
-30065 = Tidal Stream II<br />
-30066 = Tidal Stream III<br />
-30071 = Crescent Leaf I<br />
-30072 = Crescent Leaf II<br />
-30073 = Crescent Leaf III<br />
-30081 = Thron Strike I<br />
-30082 = Thron Strike II<br />
-30083 = Thron Strike III<br />
-30091 = Rune Forest I<br />
-30092 = Rune Forest II<br />
-30093 = Rune Forest III<br />
-30094 = Needle Plant I<br />
-30095 = Needle Plant II<br />
-30096 = Needle Plant III<br />
-30101 = Icicle Edge I<br />
-30102 = Icicle Edge II<br />
-30103 = Icicle Edge III<br />
-30111 = Frozen Bullet I<br />
-30112 = Frozen Bullet II<br />
-30113 = Frozen Bullet III<br />
-30121 = Lethal Blizzard I<br />
-30122 = Lethal Blizzard II<br />
-30123 = Lethal Blizzard III<br />
-30124 = Diamond Dust I<br />
-30125 = Diamond Dust II<br />
-30126 = Diamond Dust III<br />
-30131 = Nanomachine Break I<br />
-30132 = Nanomachine Break II<br />
-30133 = Nanomachine Break III<br />
-30141 = Shock Plasma I<br />
-30142 = Shock Plasma II<br />
-30143 = Shock Plasma III<br />
-30151 = Thunder Fall I<br />
-30152 = Thunder Fall II<br />
-30153 = Thunder Fall III<br />
-30154 = Lightning Claw I<br />
-30155 = Lightning Claw II<br />
-30156 = Lightning Claw III<br />
-30161 = Comet Hammer I<br />
-30162 = Comet Hammer II<br />
-30163 = Comet Hammer III<br />
-30171 = Gaia Blaster I<br />
-30172 = Gaia Blaster II<br />
-30173 = Gaia Blaster III<br />
-30181 = Stone Cleave I<br />
-30182 = Stone Cleave II<br />
-30183 = Stone Cleave III<br />
-30184 = Awesome Quake I<br />
-30185 = Awesome Quake II<br />
-30186 = Awesome Quake III<br />
-30191 = Wind Claw I<br />
-30192 = Wind Claw II<br />
-30193 = Wind Claw III<br />
-30201 = Sonic Shot I<br />
-30202 = Sonic Shot II<br />
-30203 = Sonic Shot III<br />
-30211 = Gale Storm I<br />
-30212 = Gale Storm II<br />
-30213 = Gale Storm III<br />
-30214 = Tempest I<br />
-30215 = Tempest II<br />
-30216 = Tempest III<br />
-30221 = Crush Blade I<br />
-30222 = Crush Blade II<br />
-30223 = Crush Blade III<br />
-30231 = Thruster Metal I<br />
-30232 = Thruster Metal II<br />
-30233 = Thruster Metal III<br />
-30241 = Full Metal Pile I<br />
-30242 = Full Metal Pile II<br />
-30243 = Full Metal Pile III<br />
-30244 = Iron Fist I<br />
-30245 = Iron Fist II<br />
-30246 = Iron Fist III<br />
-30251 = Saint Knuckle I<br />
-30252 = Saint Knuckle II<br />
-30253 = Saint Knuckle III<br />
-30261 = Holy Light I<br />
-30262 = Holy Light II<br />
-30263 = Holy Light III<br />
-30271 = Shine Burst I<br />
-30272 = Shine Burst II<br />
-30273 = Shine Burst III<br />
-30274 = Angel Ladder I<br />
-30275 = Angel Ladder II<br />
-30276 = Angel Ladder III<br />
-30281 = Shadow Fang I<br />
-30282 = Shadow Fang II<br />
-30283 = Shadow Fang III<br />
-30291 = Nightmare I<br />
-30292 = Nightmare II<br />
-30293 = Nightmare III<br />
-30301 = Hell Crusher I<br />
-30302 = Hell Crusher II<br />
-30303 = Hell Crusher III<br />
-30304 = Soul Fear I<br />
-30305 = Soul Fear II<br />
-30306 = Soul Fear III<br />
-30311 = Heavy Strike I<br />
-30312 = Heavy Strike II<br />
-30313 = Heavy Strike III<br />
-30321 = Power Energy I<br />
-30322 = Power Energy II<br />
-30323 = Power Energy III<br />
-30331 = Void Ray I<br />
-30332 = Void Ray II<br />
-30333 = Void Ray III<br />
-30334 = Lunatic Gate I<br />
-30335 = Lunatic Gate II<br />
-30336 = Lunatic Gate III<br />
-31011 = Heal<br />
-31012 = X-Heal<br />
-31021 = Aura<br />
-31022 = X-Aura<br />
-31031 = Revive<br />
-31032 = X-Revive<br />
-31041 = Meditator<br />
-31042 = Normalize<br />
-31051 = Dispel<br />
-31061 = Restore<br />
-32011 = Attack Charge<br />
-32021 = Guard Charge<br />
-32031 = Magic Charge<br />
-32041 = Mental Charge<br />
-32051 = Speed Charge<br />
-32061 = Critical Charge<br />
-32071 = Attack Field<br />
-32081 = Guard Field<br />
-32091 = Magic Field<br />
-32101 = Spirit Field<br />
-32111 = Speed Field<br />
-32121 = Critical Field<br />
-32131 = Attack Bind<br />
-32141 = Guard Bind<br />
-32151 = Magic Bind<br />
-32161 = Spirit Bind<br />
-32171 = Speed Bind<br />
-32181 = Critical Bind<br />
-32191 = Attack Break<br />
-32201 = Guard Break<br />
-32211 = Magic Break<br />
-32221 = Mental Break<br />
-32231 = Speed Break<br />
-32241 = Critical Break<br />
-33011 = Venom Trap<br />
-33021 = Panic Wisp<br />
-33031 = Ripping Net<br />
-33041 = Idle Bubble<br />
-33051 = Texture Blow<br />
-33061 = Character Reversal<br />
-34011 = Hate Charge<br />
-34021 = Acceleration Boost<br />
-34031 = Spell Boost<br />
-34041 = Reset Body<br />
-34051 = Attack Reflect<br />
-34061 = Magic Reflect<br />
-34071 = Curse Barrier<br />
-34081 = Status Barrier<br />
-34091 = Safety Guard  </p>
+<p><code>0</code> = none<br />
+<code>30011</code> = Wolkenapalm I<br />
+<code>30012</code> = Wolkenapalm II<br />
+<code>30013</code> = Wolkenapalm III<br />
+<code>30021</code> = Burst Flame I<br />
+<code>30022</code> = Burst Flame II<br />
+<code>30023</code> = Burst Flame III<br />
+<code>30031</code> = Magma Fall I<br />
+<code>30032</code> = Magma Fall II<br />
+<code>30033</code> = Magma Fall III<br />
+<code>30034</code> = Ignition Flare I<br />
+<code>30035</code> = Ignition Flare II<br />
+<code>30036</code> = Ignition Flare III<br />
+<code>30041</code> = Aqua Pressure I<br />
+<code>30042</code> = Aqua Pressure II<br />
+<code>30043</code> = Aqua Pressure III<br />
+<code>30051</code> = Hydro Water I<br />
+<code>30052</code> = Hydro Water II<br />
+<code>30053</code> = Hydro Water III<br />
+<code>30061</code> = Ocean Wave I<br />
+<code>30062</code> = Ocean Wave II<br />
+<code>30063</code> = Ocean Wave III<br />
+<code>30064</code> = Tidal Stream I<br />
+<code>30065</code> = Tidal Stream II<br />
+<code>30066</code> = Tidal Stream III<br />
+<code>30071</code> = Crescent Leaf I<br />
+<code>30072</code> = Crescent Leaf II<br />
+<code>30073</code> = Crescent Leaf III<br />
+<code>30081</code> = Thorn Strike I<br />
+<code>30082</code> = Thorn Strike II<br />
+<code>30083</code> = Thorn Strike III<br />
+<code>30091</code> = Rune Forest I<br />
+<code>30092</code> = Rune Forest II<br />
+<code>30093</code> = Rune Forest III<br />
+<code>30094</code> = Needle Plant I<br />
+<code>30095</code> = Needle Plant II<br />
+<code>30096</code> = Needle Plant III<br />
+<code>30101</code> = Icicle Edge I<br />
+<code>30102</code> = Icicle Edge II<br />
+<code>30103</code> = Icicle Edge III<br />
+<code>30111</code> = Frozen Bullet I<br />
+<code>30112</code> = Frozen Bullet II<br />
+<code>30113</code> = Frozen Bullet III<br />
+<code>30121</code> = Lethal Blizzard I<br />
+<code>30122</code> = Lethal Blizzard II<br />
+<code>30123</code> = Lethal Blizzard III<br />
+<code>30124</code> = Diamond Dust I<br />
+<code>30125</code> = Diamond Dust II<br />
+<code>30126</code> = Diamond Dust III<br />
+<code>30131</code> = Nanomachine Break I<br />
+<code>30132</code> = Nanomachine Break II<br />
+<code>30133</code> = Nanomachine Break III<br />
+<code>30141</code> = Shock Plasma I<br />
+<code>30142</code> = Shock Plasma II<br />
+<code>30143</code> = Shock Plasma III<br />
+<code>30151</code> = Thunder Fall I<br />
+<code>30152</code> = Thunder Fall II<br />
+<code>30153</code> = Thunder Fall III<br />
+<code>30154</code> = Lightning Claw I<br />
+<code>30155</code> = Lightning Claw II<br />
+<code>30156</code> = Lightning Claw III<br />
+<code>30161</code> = Comet Hammer I<br />
+<code>30162</code> = Comet Hammer II<br />
+<code>30163</code> = Comet Hammer III<br />
+<code>30171</code> = Gaia Blaster I<br />
+<code>30172</code> = Gaia Blaster II<br />
+<code>30173</code> = Gaia Blaster III<br />
+<code>30181</code> = Stone Cleave I<br />
+<code>30182</code> = Stone Cleave II<br />
+<code>30183</code> = Stone Cleave III<br />
+<code>30184</code> = Awesome Quake I<br />
+<code>30185</code> = Awesome Quake II<br />
+<code>30186</code> = Awesome Quake III<br />
+<code>30191</code> = Wind Claw I<br />
+<code>30192</code> = Wind Claw II<br />
+<code>30193</code> = Wind Claw III<br />
+<code>30201</code> = Sonic Shot I<br />
+<code>30202</code> = Sonic Shot II<br />
+<code>30203</code> = Sonic Shot III<br />
+<code>30211</code> = Gale Storm I<br />
+<code>30212</code> = Gale Storm II<br />
+<code>30213</code> = Gale Storm III<br />
+<code>30214</code> = Tempest I<br />
+<code>30215</code> = Tempest II<br />
+<code>30216</code> = Tempest III<br />
+<code>30221</code> = Crush Blade I<br />
+<code>30222</code> = Crush Blade II<br />
+<code>30223</code> = Crush Blade III<br />
+<code>30231</code> = Thruster Metal I<br />
+<code>30232</code> = Thruster Metal II<br />
+<code>30233</code> = Thruster Metal III<br />
+<code>30241</code> = Full Metal Pile I<br />
+<code>30242</code> = Full Metal Pile II<br />
+<code>30243</code> = Full Metal Pile III<br />
+<code>30244</code> = Iron Fist I<br />
+<code>30245</code> = Iron Fist II<br />
+<code>30246</code> = Iron Fist III<br />
+<code>30251</code> = Saint Knuckle I<br />
+<code>30252</code> = Saint Knuckle II<br />
+<code>30253</code> = Saint Knuckle III<br />
+<code>30261</code> = Holy Light I<br />
+<code>30262</code> = Holy Light II<br />
+<code>30263</code> = Holy Light III<br />
+<code>30271</code> = Shine Burst I<br />
+<code>30272</code> = Shine Burst II<br />
+<code>30273</code> = Shine Burst III<br />
+<code>30274</code> = Angel Ladder I<br />
+<code>30275</code> = Angel Ladder II<br />
+<code>30276</code> = Angel Ladder III<br />
+<code>30281</code> = Shadow Fang I<br />
+<code>30282</code> = Shadow Fang II<br />
+<code>30283</code> = Shadow Fang III<br />
+<code>30291</code> = Nightmare I<br />
+<code>30292</code> = Nightmare II<br />
+<code>30293</code> = Nightmare III<br />
+<code>30301</code> = Hell Crusher I<br />
+<code>30302</code> = Hell Crusher II<br />
+<code>30303</code> = Hell Crusher III<br />
+<code>30304</code> = Soul Fear I<br />
+<code>30305</code> = Soul Fear II<br />
+<code>30306</code> = Soul Fear III<br />
+<code>30311</code> = Heavy Strike I<br />
+<code>30312</code> = Heavy Strike II<br />
+<code>30313</code> = Heavy Strike III<br />
+<code>30321</code> = Power Energy I<br />
+<code>30322</code> = Power Energy II<br />
+<code>30323</code> = Power Energy III<br />
+<code>30331</code> = Void Ray I<br />
+<code>30332</code> = Void Ray II<br />
+<code>30333</code> = Void Ray III<br />
+<code>30334</code> = Lunatic Gate I<br />
+<code>30335</code> = Lunatic Gate II<br />
+<code>30336</code> = Lunatic Gate III<br />
+<code>31011</code> = Heal<br />
+<code>31012</code> = X-Heal<br />
+<code>31021</code> = Aura<br />
+<code>31022</code> = X-Aura<br />
+<code>31031</code> = Revive<br />
+<code>31032</code> = X-Revive<br />
+<code>31041</code> = Meditator<br />
+<code>31042</code> = Normalize<br />
+<code>31051</code> = Dispel<br />
+<code>31061</code> = Restore<br />
+<code>32011</code> = Attack Charge<br />
+<code>32021</code> = Guard Charge<br />
+<code>32031</code> = Magic Charge<br />
+<code>32041</code> = Mental Charge<br />
+<code>32051</code> = Speed Charge<br />
+<code>32061</code> = Critical Charge<br />
+<code>32071</code> = Attack Field<br />
+<code>32081</code> = Guard Field<br />
+<code>32091</code> = Magic Field<br />
+<code>32101</code> = Spirit Field<br />
+<code>32111</code> = Speed Field<br />
+<code>32121</code> = Critical Field<br />
+<code>32131</code> = Attack Bind<br />
+<code>32141</code> = Guard Bind<br />
+<code>32151</code> = Magic Bind<br />
+<code>32161</code> = Spirit Bind<br />
+<code>32171</code> = Speed Bind<br />
+<code>32181</code> = Critical Bind<br />
+<code>32191</code> = Attack Break<br />
+<code>32201</code> = Guard Break<br />
+<code>32211</code> = Magic Break<br />
+<code>32221</code> = Mental Break<br />
+<code>32231</code> = Speed Break<br />
+<code>32241</code> = Critical Break<br />
+<code>33011</code> = Venom Trap<br />
+<code>33021</code> = Panic Wisp<br />
+<code>33031</code> = Ripping Net<br />
+<code>33041</code> = Idle Bubble<br />
+<code>33051</code> = Texture Blow<br />
+<code>33061</code> = Character Reversal<br />
+<code>34011</code> = Hate Charge<br />
+<code>34021</code> = Acceleration Boost<br />
+<code>34031</code> = Spell Boost<br />
+<code>34041</code> = Reset Body<br />
+<code>34051</code> = Attack Reflect<br />
+<code>34061</code> = Magic Reflect<br />
+<code>34071</code> = Curse Barrier<br />
+<code>34081</code> = Status Barrier<br />
+<code>34091</code> = Safety Guard  </p>
 </details>
 <details class="info">
 <summary>Suggested levels at which Attachment Skills are learned</summary>

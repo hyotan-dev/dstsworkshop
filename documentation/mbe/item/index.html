@@ -1480,7 +1480,8 @@
 <h3 id="basic-parameters">Basic parameters</h3>
 <ul>
 <li><strong>int32 0</strong>: unique item ID.  </li>
-<li><strong>int32 4</strong>: item name ID (same as the item ID). Set the name in <code>text/item_name.mbe</code>.  </li>
+<li><strong>int32 4</strong>: item name ID (usually, same as the item ID). Set the name in <code>text/item_name.mbe</code>.<br />
+For attachment skills, set the item name ID to <code>30000</code> to use the skill's name.  </li>
 <li><strong>int32 5</strong>: item description ID. <code>0</code> = automatic description. Item ID = unique description (set in <code>text/item_explanation.mbe</code>).  </li>
 <li><strong>int32 6</strong>: item category. Determines which tab an item appears under in the shop menu and inventory.  </li>
 </ul>

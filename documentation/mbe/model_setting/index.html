@@ -1270,21 +1270,27 @@
 <ul>
 <li><strong>string2 0</strong>: model name (without file extension).  </li>
 <li><strong>float 8</strong>: follower collision. An invisible sphere that makes your Digimon bump into each other while following you in the overworld.  </li>
-<li><strong>float 10</strong>: NPC collision. An invisible sphere around NPCs that blocks movement. <code>0</code> = no colission (players can pass through NPCs).  </li>
-<li><strong>float 22</strong>: overworld fade out distance. Controls how close the camera can get before the model fades out in the overworld. <code>0</code> = the model never fades out.  </li>
+<li><strong>float 10</strong>: NPC collision. An invisible sphere around NPCs that blocks movement.<br />
+<code>0</code> = no colission (players can pass through NPCs).  </li>
+<li><strong>float 22</strong>: overworld fade out distance. Controls how close the camera can get before the model fades out in the overworld.<br />
+<code>0</code> = the model never fades out.  </li>
 <li><strong>float 26</strong>: camera zoom out while riding.<br />
-<code>0</code> = no camera change (used by Terriermon Assistant). <code>5</code> = Default (the camera zooms out slightly, used by the rest of the models).  </li>
+<code>0</code> = no camera change (used by Terriermon Assistant).<br />
+<code>5</code> = Default (the camera zooms out slightly; used by the rest of the models).  </li>
 <li><strong>string 2 27</strong>: second idle animation. Extra animation that occasionally interrupts the normal idle loop. Default: <code>fe02</code>.  </li>
 <li><strong>string 2 29</strong>: third idle animation. Empty by default, but any Digimon can use it.  </li>
 <li><strong>string 2 31</strong>: fourth idle animation. Empty by default, but any Digimon can use it.  </li>
-<li><strong>Float 33</strong>: walking speed while following you in the overworld.  </li>
+<li><strong>Float 33</strong>: walking speed while following the player in the overworld.  </li>
 </ul>
 <h3 id="battle">Battle</h3>
 <ul>
 <li><strong>float 38</strong>: Digimon distance from other party members in battle.  </li>
 <li><strong>float_39</strong>: player distance from Digimon in battle.  </li>
-<li><strong>int 40</strong> player angle from Digimon in battle (in degrees; <code>0</code> = player is in front of the Digimon; <code>180</code> = player is behind the Digimon).  </li>
-<li><strong>float 41</strong> fade out distance in battle. Controls how close the camera can get before the model fades out in battle. <code>0</code> = the model never fades out.  </li>
+<li><strong>int 40</strong> player angle from Digimon in battle (in degrees).<br />
+<code>0</code> = player is in front of the Digimon.<br />
+<code>180</code> = player is behind the Digimon.  </li>
+<li><strong>float 41</strong> fade out distance in battle. Controls how close the camera can get before the model fades out in battle.<br />
+<code>0</code> = the model never fades out.  </li>
 <li><strong>float 43</strong> skill camera distance in battle. Distance of the camera when choosing skills.  </li>
 <li><strong>float_47</strong>: shield and buff/debuff size in battle.  </li>
 </ul>
